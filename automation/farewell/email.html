@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>অনুবর্তন ৩.০ - Farewell Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .event-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+      .event-card {
+        background-color: #fef9f3;
+        border-radius: 15px;
+        border: 3px solid #d92353;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .greetings-card {
+        padding: 40px 25px 0px 30px;
+        background-color: #ffffff;
+      }
+      .schedule-title {
+        font-size: 28px;
+        color: #2c2c2c;
+        text-align: center;
+        font-family: Georgia, serif;
+        font-weight: bold;
+      }
+      .key-move {
+        margin: 0 0 15px 0;
+        font-size: 20px;
+        color: #2c2c2c;
+        font-weight: bold;
+      }
+      .key-move-desc {
+        margin: 0;
+        font-size: 16px;
+        color: #2c2c2c;
+        line-height: 1.6;
+      }
+      .font-14 {
+        font-size: 14px;
+      }
+      .schedule-container {
+        padding: 5px 30px 40px 30px;
+        background-color: #ffffff;
+      }
+      .board-container {
+        background: linear-gradient(
+            45deg,
+            rgba(44, 44, 44, 0.05) 25%,
+            transparent 25%,
+            transparent 75%,
+            rgba(44, 44, 44, 0.05) 75%
+          ),
+          linear-gradient(
+            45deg,
+            rgba(44, 44, 44, 0.05) 25%,
+            transparent 25%,
+            transparent 75%,
+            rgba(44, 44, 44, 0.05) 75%
+          );
+        background-size: 30px 30px;
+        background-position: 0 0, 15px 15px;
+        padding: 40px 30px;
+        text-align: center;
+      }
+      .board-item {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 15px;
+        border: 2px solid #d92353;
+      }
+      .mb-15 {
+        margin-bottom: 15px;
+      }
+      .schedule-table-mobile {
+        display: none;
+      }
+      @media (max-width: 992px) {
+        table[class="responsive-table"] td {
+          display: block !important;
+          width: 100% !important;
+        }
+        .schedule-table-desktop {
+          display: none !important;
+        }
+        .schedule-table-mobile {
+          display: block !important;
+          width: 100% !important;
+        }
+        .schedule-table-mobile td {
+          display: block;
+          width: 100% !important;
+          box-sizing: border-box;
+        }
+        .schedule-table-mobile table {
+          width: 100% !important;
+        }
+        .board-container {
+          padding: 15px;
+        }
+        .board-item {
+          padding: 5px;
+        }
+        .greetings-card {
+          padding: 15px 5px 0px 5px;
+        }
+        .schedule-title {
+          font-size: 17px;
+        }
+        .key-move {
+          font-size: 15px;
+        }
+        .font-14 {
+          font-size: 12px;
+        }
+        .mb-15 {
+          margin-bottom: 0px;
+        }
+        .schedule-container {
+          padding: 5px !important;
+        }
+        .event-container {
+          grid-template-columns: 1fr;
+        }
+
+        .event-card {
+          margin: 0px !important;
+          margin-bottom: 10px;
+        }
+        tbody,
+        tr {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    "
+  >
+    <main
+      style="
+        background-color: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 8px 30px rgba(44, 44, 44, 0.3);
+        margin: 20px;
+      "
+    >
+      <div
+        style="
+          position: relative;
+          padding: 40px 30px;
+          text-align: center;
+          background: linear-gradient(
+              rgba(44, 44, 44, 0.8),
+              rgba(217, 35, 83, 0.7)
+            ),
+            url('https://i.postimg.cc/6p2ptsmC/banner.jpg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          overflow: hidden;
+          border-radius: 5px;
+        "
+      >
+        <!-- Chess Pattern Overlay -->
+        <div
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.1;
+            background-image: repeating-conic-gradient(
+                #000 0% 25%,
+                transparent 0% 50%
+              )
+              50% / 20px 20px;
+            z-index: 1;
+          "
+        ></div>
+
+        <!-- Header Content -->
+        <div style="position: relative; z-index: 2">
+          <!-- Bengali Title -->
+
+          <h2
+            style="
+              margin: 0 0 10px 0;
+              font-size: 32px;
+              font-weight: bold;
+              color: #ffffff;
+              text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+              font-family: 'Atma';
+            "
+          >
+            অনুবর্তন ৩.০
+          </h2>
+
+          <!-- Chess Crown -->
+          <!-- <div
+            style="
+              font-size: 48px;
+              margin-bottom: 5px;
+              color: #ffffff;
+              text-shadow: 0 0 20px #d92353;
+            "
+          >
+            ♔
+          </div> -->
+
+          <!-- Chess Subtitle -->
+          <p
+            style="
+              margin: 0;
+              font-size: 16px;
+              color: rgba(255, 255, 255, 0.8);
+              font-style: italic;
+            "
+          >
+            "Every ending is a new beginning on the board of life"
+          </p>
+        </div>
+      </div>
+
+      <div
+        style="
+          background-color: #ffffff;
+          padding: 20px;
+          text-align: center;
+          border-bottom: 3px solid #d92353;
+        "
+      >
+        <div style="font-size: 24px; color: #d92353; letter-spacing: 10px">
+          ♛ ♚ ♜ ♝ ♞
+        </div>
+      </div>
+
+      <div class="greetings-card">
+        <div
+          style="
+            background-color: #fef9f3;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #d92353;
+          "
+        >
+          <p
+            style="
+              margin: 0 0 15px 0;
+              font-size: 16px;
+              color: #2c2c2c;
+              line-height: 1.6;
+            "
+          >
+            <strong>Dear Beloved {greeting_name},</strong>
+          </p>
+          <p
+            style="
+              margin: 0 0 15px 0;
+              font-size: 16px;
+              color: #666666;
+              line-height: 1.6;
+            "
+          >
+            Greetings from the IIT 4th Batch, NSTU.
+          </p>
+          <p
+            style="
+              margin: 0 0 15px 0;
+              font-size: 16px;
+              color: #666666;
+              line-height: 1.6;
+              text-align: justify;
+            "
+          >
+            It is with great honor and heartfelt emotion that we invite you to
+            <strong style="color: #d92353">"অনুবর্তন ৩.০"</strong>, the official
+            farewell program organized in your honor.
+          </p>
+          <p
+            style="
+              margin: 0 0 15px 0;
+              font-size: 16px;
+              color: #666666;
+              line-height: 1.6;
+              text-align: justify;
+            "
+          >
+            Like grandmasters who have guided us through every move, you have
+            been the foundation of our department's journey — mentors, leaders,
+            and a constant source of strategic inspiration.
+          </p>
+          <p
+            style="
+              margin: 0;
+              font-size: 16px;
+              color: #666666;
+              line-height: 1.6;
+              font-style: italic;
+              text-align: justify;
+            "
+          >
+            Now, as you prepare to make your next strategic move in life's grand
+            game, we wish to celebrate your legacy with the dignity, love, and
+            gratitude it truly deserves.
+          </p>
+        </div>
+      </div>
+
+      <div class="schedule-container">
+        <!-- Section Title -->
+        <h2 class="schedule-title">The Championship Schedule</h2>
+
+        <!-- Events Container -->
+        <table
+          class="schedule-table-desktop"
+          role="presentation"
+          cellspacing="0"
+          cellpadding="0"
+          border="0"
+          width="100%"
+        >
+          <tr>
+            <!-- Day 1 Event -->
+            <td width="48%" style="vertical-align: top">
+              <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+                style="
+                  background-color: #fef9f3;
+                  border-radius: 15px;
+                  border: 3px solid #d92353;
+                  overflow: hidden;
+                "
+              >
+                <!-- Event Header -->
+                <tr>
+                  <td
+                    style="
+                      background: linear-gradient(
+                        135deg,
+                        #2c2c2c 0%,
+                        #d92353 100%
+                      );
+                      padding: 3px 0;
+                    "
+                  ></td>
+                </tr>
+
+                <!-- Event Content -->
+                <tr>
+                  <td style="padding: 25px; text-align: center">
+                    <!-- Icon -->
+                    <div
+                      style="
+                        font-size: 36px;
+                        color: #d92353;
+                        margin-bottom: 15px;
+                        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+                      "
+                    >
+                      ♜
+                    </div>
+
+                    <!-- Day Title -->
+                    <div
+                      style="
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: #2c2c2c;
+                        margin-bottom: 10px;
+                      "
+                    >
+                      🟡 Opening Gambit - Day 1
+                    </div>
+
+                    <!-- Event Title -->
+                    <h3
+                      style="
+                        margin: 0 0 20px 0;
+                        font-size: 22px;
+                        font-weight: bold;
+                        color: #2c2c2c;
+                        font-family: Georgia, serif;
+                      "
+                    >
+                      Colour Fest
+                    </h3>
+
+                    <!-- Details -->
+                    <div style="text-align: left">
+                      <p
+                        style="
+                          margin: 0 0 8px 0;
+                          font-size: 14px;
+                          color: #666666;
+                          display: flex;
+                          align-items: center;
+                          gap: 5px;
+                        "
+                      >
+                        <svg
+                          fill="#D92353"
+                          width="16px"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M3,22H21a1,1,0,0,0,1-1V6a1,1,0,0,0-1-1H17V3a1,1,0,0,0-2,0V5H9V3A1,1,0,0,0,7,3V5H3A1,1,0,0,0,2,6V21A1,1,0,0,0,3,22ZM4,7H20v3H4Zm0,5H20v8H4Z"
+                            ></path>
+                          </g>
+                        </svg>
+                        <strong>Date:</strong> 19th July 2025
+                      </p>
+                      <p
+                        style="
+                          margin: 0 0 8px 0;
+                          font-size: 14px;
+                          color: #666666;
+                          display: flex;
+                          align-items: center;
+                          gap: 5px;
+                        "
+                      >
+                        <svg
+                          width="16px"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM7 3V8.41421L10.2929 11.7071L11.7071 10.2929L9 7.58579V3H7Z"
+                              fill="#D92353"
+                            ></path>
+                          </g>
+                        </svg>
+                        <strong>Time:</strong> 10:00 AM
+                      </p>
+                      <p
+                        style="
+                          margin: 0;
+                          font-size: 14px;
+                          color: #666666;
+                          display: flex;
+                          align-items: center;
+                          gap: 5px;
+                        "
+                      >
+                        <svg
+                          width="16px"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z"
+                              fill="#D92353"
+                            ></path>
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M2.08296 7C2.50448 4.48749 4.48749 2.50448 7 2.08296V0H9V2.08296C11.5125 2.50448 13.4955 4.48749 13.917 7H16V9H13.917C13.4955 11.5125 11.5125 13.4955 9 13.917V16H7V13.917C4.48749 13.4955 2.50448 11.5125 2.08296 9H0V7H2.08296ZM4 8C4 5.79086 5.79086 4 8 4C10.2091 4 12 5.79086 12 8C12 10.2091 10.2091 12 8 12C5.79086 12 4 10.2091 4 8Z"
+                              fill="#D92353"
+                            ></path>
+                          </g>
+                        </svg>
+                        <strong>Venue:</strong> Gol Chottor, NSTU
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+
+            <!-- Spacer -->
+            <td width="4%"></td>
+
+            <!-- Day 2 Event -->
+            <td width="48%" style="vertical-align: top">
+              <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+                style="
+                  background-color: #282324;
+                  border-radius: 15px;
+                  border: 3px solid #d92353;
+                  overflow: hidden;
+                "
+              >
+                <!-- Event Header -->
+                <tr>
+                  <td style="background: #d92353; padding: 3px 0"></td>
+                </tr>
+
+                <!-- Event Content -->
+                <tr>
+                  <td style="padding: 25px; text-align: center">
+                    <!-- Icon -->
+                    <div
+                      style="
+                        font-size: 36px;
+                        color: #d92353;
+                        margin-bottom: 15px;
+                        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                      "
+                    >
+                      ♛
+                    </div>
+
+                    <!-- Day Title -->
+                    <div
+                      style="
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: #ffffff;
+                        margin-bottom: 10px;
+                      "
+                    >
+                      ⚫ Final Move - Day 2
+                    </div>
+
+                    <!-- Event Title -->
+                    <h3
+                      style="
+                        margin: 0 0 20px 0;
+                        font-size: 22px;
+                        font-weight: bold;
+                        color: #d92353;
+                        font-family: Georgia, serif;
+                      "
+                    >
+                      Endgame Celebration
+                    </h3>
+
+                    <!-- Details -->
+                    <div style="text-align: left">
+                      <p
+                        style="
+                          margin: 0 0 8px 0;
+                          font-size: 14px;
+                          color: #ffffff;
+                          display: flex;
+                          align-items: center;
+                          gap: 5px;
+                        "
+                      >
+                        <svg
+                          fill="#ffffff"
+                          width="16px"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M3,22H21a1,1,0,0,0,1-1V6a1,1,0,0,0-1-1H17V3a1,1,0,0,0-2,0V5H9V3A1,1,0,0,0,7,3V5H3A1,1,0,0,0,2,6V21A1,1,0,0,0,3,22ZM4,7H20v3H4Zm0,5H20v8H4Z"
+                            ></path>
+                          </g>
+                        </svg>
+                        <strong>Date:</strong> 20th July 2025
+                      </p>
+                      <p
+                        style="
+                          margin: 0 0 8px 0;
+                          font-size: 14px;
+                          color: #ffffff;
+                          display: flex;
+                          align-items: center;
+                          gap: 5px;
+                        "
+                      >
+                        <svg
+                          width="16px"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM7 3V8.41421L10.2929 11.7071L11.7071 10.2929L9 7.58579V3H7Z"
+                              fill="#ffffff"
+                            ></path>
+                          </g>
+                        </svg>
+                        <strong>Time:</strong> 9:00 AM – 9:00 PM
+                      </p>
+                      <p
+                        style="
+                          margin: 0;
+                          font-size: 14px;
+                          color: #ffffff;
+                          display: flex;
+                          align-items: center;
+                          gap: 5px;
+                        "
+                      >
+                        <svg
+                          width="16px"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z"
+                              fill="#ffffff"
+                            ></path>
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M2.08296 7C2.50448 4.48749 4.48749 2.50448 7 2.08296V0H9V2.08296C11.5125 2.50448 13.4955 4.48749 13.917 7H16V9H13.917C13.4955 11.5125 11.5125 13.4955 9 13.917V16H7V13.917C4.48749 13.4955 2.50448 11.5125 2.08296 9H0V7H2.08296ZM4 8C4 5.79086 5.79086 4 8 4C10.2091 4 12 5.79086 12 8C12 10.2091 10.2091 12 8 12C5.79086 12 4 10.2091 4 8Z"
+                              fill="#ffffff"
+                            ></path>
+                          </g>
+                        </svg>
+                        <strong>Venue:</strong> Birshreshtha Ruhul Amin
+                        Auditorium, NSTU
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <table
+          class="schedule-table-mobile"
+          role="presentation"
+          cellspacing="0"
+          cellpadding="0"
+          border="0"
+          width="100%"
+          style="padding-bottom: 10px"
+        >
+          <tr style="width: 100%">
+            <!-- Day 1 Event -->
+            <td>
+              <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+                style="
+                  background-color: #fef9f3;
+                  border-radius: 15px;
+                  border: 3px solid #d92353;
+                  overflow: hidden;
+                "
+              >
+                <!-- Event Header -->
+                <tr>
+                  <td
+                    style="
+                      background: linear-gradient(
+                        135deg,
+                        #2c2c2c 0%,
+                        #d92353 100%
+                      );
+                      padding: 3px 0;
+                    "
+                  ></td>
+                </tr>
+
+                <!-- Event Content -->
+                <tr>
+                  <td style="padding: 25px; text-align: center">
+                    <!-- Icon -->
+                    <div
+                      style="
+                        font-size: 36px;
+                        color: #d92353;
+                        margin-bottom: 15px;
+                        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+                      "
+                    >
+                      ♜
+                    </div>
+
+                    <!-- Day Title -->
+                    <div
+                      style="
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: #2c2c2c;
+                        margin-bottom: 10px;
+                      "
+                    >
+                      🟡 Opening Gambit - Day 1
+                    </div>
+
+                    <!-- Event Title -->
+                    <h3
+                      style="
+                        margin: 0 0 20px 0;
+                        font-size: 22px;
+                        font-weight: bold;
+                        color: #2c2c2c;
+                        font-family: Georgia, serif;
+                      "
+                    >
+                      Colour Fest
+                    </h3>
+
+                    <!-- Details -->
+                    <div style="text-align: left">
+                      <p
+                        style="
+                          margin: 0 0 8px 0;
+                          font-size: 14px;
+                          color: #666666;
+                          display: flex;
+                          align-items: center;
+                          gap: 5px;
+                        "
+                      >
+                        <svg
+                          fill="#D92353"
+                          width="16px"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M3,22H21a1,1,0,0,0,1-1V6a1,1,0,0,0-1-1H17V3a1,1,0,0,0-2,0V5H9V3A1,1,0,0,0,7,3V5H3A1,1,0,0,0,2,6V21A1,1,0,0,0,3,22ZM4,7H20v3H4Zm0,5H20v8H4Z"
+                            ></path>
+                          </g>
+                        </svg>
+                        <strong>Date:</strong> 19th July 2025
+                      </p>
+                      <p
+                        style="
+                          margin: 0 0 8px 0;
+                          font-size: 14px;
+                          color: #666666;
+                          display: flex;
+                          align-items: center;
+                          gap: 5px;
+                        "
+                      >
+                        <svg
+                          width="16px"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM7 3V8.41421L10.2929 11.7071L11.7071 10.2929L9 7.58579V3H7Z"
+                              fill="#D92353"
+                            ></path>
+                          </g>
+                        </svg>
+                        <strong>Time:</strong> 10:00 AM
+                      </p>
+                      <p
+                        style="
+                          margin: 0;
+                          font-size: 14px;
+                          color: #666666;
+                          display: flex;
+                          align-items: center;
+                          gap: 5px;
+                        "
+                      >
+                        <svg
+                          width="16px"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z"
+                              fill="#D92353"
+                            ></path>
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M2.08296 7C2.50448 4.48749 4.48749 2.50448 7 2.08296V0H9V2.08296C11.5125 2.50448 13.4955 4.48749 13.917 7H16V9H13.917C13.4955 11.5125 11.5125 13.4955 9 13.917V16H7V13.917C4.48749 13.4955 2.50448 11.5125 2.08296 9H0V7H2.08296ZM4 8C4 5.79086 5.79086 4 8 4C10.2091 4 12 5.79086 12 8C12 10.2091 10.2091 12 8 12C5.79086 12 4 10.2091 4 8Z"
+                              fill="#D92353"
+                            ></path>
+                          </g>
+                        </svg>
+                        <strong>Venue:</strong> Central Field, NSTU
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- Spacer -->
+          <tr height="10px"></tr>
+          <tr style="width: 100%">
+            <!-- Day 2 Event -->
+            <td>
+              <table
+                role="presentation"
+                cellspacing="0"
+                cellpadding="0"
+                border="0"
+                width="100%"
+                style="
+                  background-color: #2c2c2c;
+                  border-radius: 15px;
+                  border: 3px solid #d92353;
+                  overflow: hidden;
+                "
+              >
+                <!-- Event Header -->
+                <tr>
+                  <td style="background: #d92353; padding: 3px 0"></td>
+                </tr>
+
+                <!-- Event Content -->
+                <tr>
+                  <td style="padding: 25px; text-align: center">
+                    <!-- Icon -->
+                    <div
+                      style="
+                        font-size: 36px;
+                        color: #d92353;
+                        margin-bottom: 15px;
+                        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                      "
+                    >
+                      ♛
+                    </div>
+
+                    <!-- Day Title -->
+                    <div
+                      style="
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: #ffffff;
+                        margin-bottom: 10px;
+                      "
+                    >
+                      ⚫ Final Move - Day 2
+                    </div>
+
+                    <!-- Event Title -->
+                    <h3
+                      style="
+                        margin: 0 0 20px 0;
+                        font-size: 22px;
+                        font-weight: bold;
+                        color: #d92353;
+                        font-family: Georgia, serif;
+                      "
+                    >
+                      Endgame Celebration
+                    </h3>
+
+                    <!-- Details -->
+                    <div style="text-align: left">
+                      <p
+                        style="
+                          margin: 0 0 8px 0;
+                          font-size: 14px;
+                          color: #ffffff;
+                          display: flex;
+                          align-items: center;
+                          gap: 5px;
+                        "
+                      >
+                        <svg
+                          fill="#ffffff"
+                          width="16px"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M3,22H21a1,1,0,0,0,1-1V6a1,1,0,0,0-1-1H17V3a1,1,0,0,0-2,0V5H9V3A1,1,0,0,0,7,3V5H3A1,1,0,0,0,2,6V21A1,1,0,0,0,3,22ZM4,7H20v3H4Zm0,5H20v8H4Z"
+                            ></path>
+                          </g>
+                        </svg>
+                        <strong>Date:</strong> 20th July 2025
+                      </p>
+                      <p
+                        style="
+                          margin: 0 0 8px 0;
+                          font-size: 14px;
+                          color: #ffffff;
+                          display: flex;
+                          align-items: center;
+                          gap: 5px;
+                        "
+                      >
+                        <svg
+                          width="16px"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM7 3V8.41421L10.2929 11.7071L11.7071 10.2929L9 7.58579V3H7Z"
+                              fill="#ffffff"
+                            ></path>
+                          </g>
+                        </svg>
+                        <strong>Time:</strong> 9:00 AM – 9:00 PM
+                      </p>
+                      <p
+                        style="
+                          margin: 0;
+                          font-size: 14px;
+                          color: #ffffff;
+                          display: flex;
+                          align-items: center;
+                          gap: 5px;
+                        "
+                      >
+                        <svg
+                          width="16px"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              d="M8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z"
+                              fill="#ffffff"
+                            ></path>
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M2.08296 7C2.50448 4.48749 4.48749 2.50448 7 2.08296V0H9V2.08296C11.5125 2.50448 13.4955 4.48749 13.917 7H16V9H13.917C13.4955 11.5125 11.5125 13.4955 9 13.917V16H7V13.917C4.48749 13.4955 2.50448 11.5125 2.08296 9H0V7H2.08296ZM4 8C4 5.79086 5.79086 4 8 4C10.2091 4 12 5.79086 12 8C12 10.2091 10.2091 12 8 12C5.79086 12 4 10.2091 4 8Z"
+                              fill="#ffffff"
+                            ></path>
+                          </g>
+                        </svg>
+                        <strong>Venue:</strong> Birshreshtha Ruhul Amin
+                        Auditorium, NSTU
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="board-container">
+        <div class="board-item">
+          <div style="font-size: 32px; color: #d92353" class="mb-15">♔</div>
+          <blockquote
+            style="
+              margin: 0;
+              font-size: 18px;
+              color: #2c2c2c;
+              font-style: italic;
+              line-height: 1.6;
+            "
+          >
+            "In life, as in code, the most impactful changes often happen behind
+            the scenes. Thank you for showing us the strength of quiet
+            leadership and thoughtful intention."
+          </blockquote>
+          <div
+            style="
+              margin-top: 15px;
+              font-size: 14px;
+              color: #666666;
+              font-weight: bold;
+            "
+          >
+            — Your Devoted Juniors
+          </div>
+        </div>
+      </div>
+      <div style="padding: 30px; background-color: #d92353; text-align: center">
+        <h3 class="key-move" style="color: #e8e0e0">
+          ♚ Your Presence is the Key Move ♚
+        </h3>
+        <p class="key-move-desc" style="color: #e8e0e0">
+          We sincerely hope you will honor us with your presence on both days.
+          Your participation will complete this celebration and give us the
+          opportunity to express our love, respect, and heartfelt appreciation
+          in the most strategic way.
+        </p>
+      </div>
+      <div
+        style="
+          background-color: #2c2c2c;
+          padding: 20px 30px;
+          text-align: center;
+        "
+      >
+        <div
+          style="
+            font-size: 24px;
+            color: #d92353;
+            margin-bottom: 20px;
+            letter-spacing: 5px;
+            padding: 10px 0;
+            border-bottom: 1px solid #ffffff;
+          "
+        >
+          ♔ ♕ ♖ ♗ ♘
+        </div>
+        <p
+          style="
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            color: #ffffff;
+            font-weight: bold;
+          "
+        >
+          Checkmate with Love
+        </p>
+        <p class="font-14" style="margin: 0 0 5px 0; color: #ffffff">
+          IIT 4th Batch
+        </p>
+        <p class="font-14" style="margin: 0; color: #ffffff">
+          Noakhali Science and Technology University
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
