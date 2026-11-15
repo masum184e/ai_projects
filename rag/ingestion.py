@@ -9,7 +9,9 @@ from collections import defaultdict
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from common import Config
+from vectors.faiss.store import FAISSVectorStore
+from vectors.chroma.store import ChromaVectorStore
+from common import Config, SentenceTransformerEmbeddings
 
 class DocumentLoader:
     """Reusable document loader for RAG applications."""
@@ -165,11 +167,44 @@ class IngestionPipeline:
     def __init__(self, config: Config | None = None):
         self.cfg = config or Config()
         self.loader = DocumentLoader()
+
         self.chunker = Chunker(
             chunk_size=self.cfg.chunk_size,
             chunk_overlap=self.cfg.chunk_overlap,
         )
 
+        self.embedding_model = SentenceTransformerEmbeddings(
+            self.cfg.embedding_model_name
+        )
+
+        self.vector_store = self._initialize_vector_store()
+
+    def _initialize_vector_store(self):
+
+        if self.cfg.store_type == "chroma":
+
+            return ChromaVectorStore(
+                persist_directory=(
+                    f"{self.cfg.index_dir}/chroma"
+                ),
+                embedding_model=self.embedding_model,
+                collection_name=self.cfg.collection_name,
+            )
+
+        elif self.cfg.store_type == "faiss":
+
+            return FAISSVectorStore(
+                persist_directory=(
+                    f"{self.cfg.index_dir}/faiss"
+                ),
+                embedding_model=self.embedding_model,
+                index_name=self.cfg.collection_name
+            )
+
+        raise ValueError(
+            "store_type must be either 'chroma' or 'faiss'"
+        )
+        
     # def run(self) -> IngestionReport:
     def run(self):
         start = time.time()
@@ -180,7 +215,7 @@ class IngestionPipeline:
         elapsed = time.time() - start
         
         print("\n" + "=" * 50)
-        print(" INGESTION COMPLETED SUCCESSFULLY")
+        print(" INGESTION STARTED SUCCESSFULLY")
         print("=" * 50)
         print(f" Documents loaded : {len(docs)}")
         print(f" Execution time   : {elapsed:.2f} seconds")
@@ -251,24 +286,33 @@ class IngestionPipeline:
 
         # print("=" * 60)
 
-        texts = [chunk.page_content for chunk in chunks]
+        # texts = [chunk.page_content for chunk in chunks]
 
-        vectors = self.cfg.embedding_model.encode(
-            texts,
-            show_progress_bar=True,
-            convert_to_numpy=True,
-            normalize_embeddings=True,
+        # vectors = self.embedding_model.embed_documents(texts)
+
+        # print("\n" + "=" * 60)
+        # print(" CHUNKING COMPLETED SUCCESSFULLY")
+        # print("=" * 60)
+        # print(f" Total embeddings generated : {len(vectors)}")
+        # print(f" Embedding shape            : {vectors.shape}")
+        # print(f" Embedding dimensions       : {vectors.shape[1]}")
+
+        # print("=" * 60)
+
+        self.vector_store.add_documents(
+            documents=chunks,
         )
 
         print("\n" + "=" * 60)
-        print(" CHUNKING COMPLETED SUCCESSFULLY")
+        print(" VECTOR STORAGE COMPLETED")
         print("=" * 60)
-        print(f" Total embeddings generated : {len(vectors)}")
-        print(f" Embedding shape            : {vectors.shape}")
-        print(f" Embedding dimensions       : {vectors.shape[1]}")
 
-        print("=" * 60)
-        
+        print(
+            f" Total vectors in database: {self.vector_store.count()}"
+        )
+        print("\n" + "=" * 50)
+        print(" INGESTION COMPLETED SUCCESSFULLY")
+        print("=" * 50)
 
 def main() -> None:
     p = argparse.ArgumentParser(description="Build the RAG vector index.")
