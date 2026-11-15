@@ -1,7 +1,12 @@
 import numpy as np
+from decouple import config
+from langchain_groq import ChatGroq
 from dataclasses import dataclass, field
-from langchain_core.embeddings import Embeddings
 from sentence_transformers import SentenceTransformer
+
+from langchain_core.embeddings import Embeddings
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
 
 class SentenceTransformerEmbeddings(Embeddings):
 
@@ -42,3 +47,79 @@ class Config:
     collection_name: str = "rag_documents"
 
     top_k: int = 4
+
+class LLM:
+
+    def __init__(
+        self,
+        model_name: str = "qwen/qwen3.8-27b",
+        temperature: float = 0.0,
+        max_tokens: int = 2048,
+    ):
+
+        print(f"Using Groq model: {model_name}")
+
+        self.model = ChatGroq(
+            model=model_name,
+            api_key=config("GROQ_API_KEY"),
+            temperature=temperature,
+            max_tokens=max_tokens,
+        )
+
+        self.output_parser = StrOutputParser()
+
+        self.prompt = ChatPromptTemplate.from_messages([
+            (
+                "system",
+                """
+                You are a helpful AI assistant specialized in
+                answering questions using retrieved context.
+
+                Follow these rules:
+                1. Answer using only the provided context.
+                2. Do not make up information.
+                3. If the answer is not available in the context,
+                   clearly say that you don't know.
+                4. Keep answers clear, accurate, and relevant.
+                5. Do not unnecessarily repeat information.
+
+                Context:
+                {context}
+                """
+            ),
+            (
+                "human",
+                "{question}"
+            )
+        ])
+
+        self.chain = self.prompt | self.model | self.output_parser
+
+    def generate(
+        self,
+        question: str,
+        context: str,
+    ) -> str:
+
+        response = self.chain.invoke({
+            "question": question,
+            "context": context,
+        })
+
+        return response
+
+    def stream(
+        self,
+        question: str,
+        context: str,
+    ):
+
+        for chunk in self.chain.stream({
+            "question": question,
+            "context": context,
+        }):
+            yield chunk
+
+    def get_model(self):
+        """Return the underlying LangChain chat model."""
+        return self.model

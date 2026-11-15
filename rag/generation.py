@@ -5,7 +5,7 @@ from langchain_core.documents import Document
 
 from vectors.faiss.store import FAISSVectorStore
 from vectors.chroma.store import ChromaVectorStore
-from common import Config, SentenceTransformerEmbeddings
+from common import Config, SentenceTransformerEmbeddings, LLM
 
 class Retriever:
 
@@ -39,6 +39,8 @@ class GenerationPipeline:
             self.vector_store
         )
 
+        self.llm = LLM()
+
     def _initialize_vector_store(self):
 
         if self.cfg.store_type == "chroma":
@@ -65,52 +67,142 @@ class GenerationPipeline:
             "store_type must be either 'chroma' or 'faiss'"
         )
 
+    def _build_context(
+        self,
+        documents: list[tuple[Document, float]]
+    ) -> str:
+
+        context_parts = []
+
+        for i, (doc, score) in enumerate(documents, start=1):
+
+            source = doc.metadata.get("source", "unknown")
+
+            context_parts.append(
+                f"""
+                Document {i}
+                Source: {source}
+                Content:
+                {doc.page_content}
+                """
+            )
+
+        return "\n\n".join(context_parts)
+
     def generate(
         self,
         query: str,
         k: int | None = None,
-        log: bool = True
-    ):
-    # ) -> GenerationResult:
+    ) -> str:
 
         start = time.time()
 
-        # 1. Retrieve relevant docs
+        # 1. Retrieve relevant documents
         contexts = self.retriever.retrieve(
-            query,
-            k or self.cfg.top_k
+            query=query,
+            k=k or self.cfg.top_k
         )
 
-        elapsed = time.time() - start
+        retrieval_time = time.time() - start
+
+        if not contexts:
+            return "No relevant documents found."
+
+        # 2. Build context
+        context = self._build_context(contexts)
+
+
         print("\n" + "=" * 80)
         print("RETRIEVED CONTEXT DETAILS")
         print("=" * 80)
-        print(f" Context loaded : {len(contexts)}")
-        print(f" Execution time   : {elapsed:.2f} seconds")
+
+        print(f"Context loaded: {len(contexts)}")
+        print(f"Execution time: {retrieval_time:.2f} seconds")
 
         print("-" * 80)
+
         for i, (doc, score) in enumerate(contexts, start=1):
-        
+
             print(f"\nContext #{i}")
             print(f"ID: {doc.id or doc.metadata.get('id', 'N/A')}")
             print(f"Source: {doc.metadata.get('source', 'unknown')}")
             print(f"Score: {score:.4f}")
-            print(f"Content length:\n{len(doc.page_content)}")
+            print(f"Content length: {len(doc.page_content)}")
+            print(f"Content: {doc.page_content}")
+        
+        # 3. Generate answer
+        generation_start = time.time()
+
+        answer = self.llm.generate(
+            question=query,
+            context=context
+        )
+
+        generation_time = time.time() - generation_start
+
+        print("\n" + "=" * 80)
+        print("GENERATED ANSWER")
+        print("=" * 80)
+
+        print(answer)
+
+        print("\n" + "-" * 80)
+        print(f"Retrieval time: {retrieval_time:.2f}s")
+        print(f"Generation time: {generation_time:.2f}s")
+        print(f"Total time: {time.time() - start:.2f}s")
+
+        return answer
+
 
 def main() -> None:
-    p = argparse.ArgumentParser(description="Ask questions against the RAG index.")
-    p.add_argument("--query", help="Single question; omit for interactive mode")
-    p.add_argument("--index-dir", default=Config.index_dir)
-    p.add_argument("--top-k", type=int, default=Config.top_k)
+
+    p = argparse.ArgumentParser(
+        description="Ask questions against the RAG index."
+    )
+
+    p.add_argument(
+        "--query",
+        help="Single question; omit for interactive mode"
+    )
+
+    p.add_argument(
+        "--index-dir",
+        default=Config().index_dir
+    )
+
+    p.add_argument(
+        "--top-k",
+        type=int,
+        default=Config().top_k
+    )
+
     args = p.parse_args()
 
     cfg = Config(
-        index_dir=args.index_dir, 
+        index_dir=args.index_dir,
         top_k=args.top_k
     )
 
-    gen = GenerationPipeline(cfg)
-    gen.generate("give me course list with course code and credit score of year 1 term 2")
+    pipeline = GenerationPipeline(cfg)
+    # pipeline.generate("give me course list with course code and credit score of year 1 term 2")
+    if args.query:
+
+        pipeline.generate(args.query)
+
+    else:
+
+        while True:
+
+            query = input("\nAsk a question (or 'exit'): ").strip()
+
+            if query.lower() in {"exit", "quit"}:
+                break
+
+            if not query:
+                continue
+
+            pipeline.generate(query)
+
 
 if __name__ == "__main__":
     main()
