@@ -40,3 +40,5 @@ class Config:
     store_type: str = "faiss"
     index_dir: str = "index"
     collection_name: str = "rag_documents"
+
+    top_k: int = 4

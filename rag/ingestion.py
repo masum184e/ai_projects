@@ -3,7 +3,6 @@ import time
 import argparse
 from pathlib import Path
 from pypdf import PdfReader
-from dataclasses import dataclass
 from collections import defaultdict
 
 from langchain_core.documents import Document
