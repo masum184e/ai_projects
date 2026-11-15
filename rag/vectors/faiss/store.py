@@ -1,5 +1,6 @@
 import faiss
 from pathlib import Path
+from typing import Any, Literal
 
 from langchain_core.documents import Document
 from langchain_core.embeddings import Embeddings
@@ -56,7 +57,7 @@ class FAISSVectorStore:
                 index=index,
                 docstore=InMemoryDocstore(),
                 index_to_docstore_id={},
-                normalize_L2=False,
+                normalize_L2=True,
                 distance_strategy=DistanceStrategy.MAX_INNER_PRODUCT
             )
 
@@ -83,7 +84,13 @@ class FAISSVectorStore:
         if not documents:
             return
 
+        if any(doc.id is None for doc in documents):
+            raise ValueError("All documents must have IDs.")
+
         ids = [str(doc.id) for doc in documents]
+
+        if len(ids) != len(set(ids)):
+            raise ValueError("Duplicate document IDs found.")
 
         self.db.add_documents(
             documents=documents,
@@ -97,12 +104,14 @@ class FAISSVectorStore:
         query: str,
         k: int = 5,
         filter: dict | None = None,
-    ):
+        fetch_k: int = 20,
+    ) -> list[Document]:
 
         return self.db.similarity_search(
             query=query,
             k=k,
             filter=filter,
+            fetch_k=fetch_k,
         )
 
     def similarity_search_with_score(
@@ -110,17 +119,119 @@ class FAISSVectorStore:
         query: str,
         k: int = 5,
         filter: dict | None = None,
-    ):
+        fetch_k: int = 20,
+    ) -> list[tuple[Document, float]]:
 
         return self.db.similarity_search_with_score(
             query=query,
             k=k,
             filter=filter,
+            fetch_k=fetch_k,
+        )
+
+    def similarity_search_with_relevance_scores(
+        self,
+        query: str,
+        k: int = 5,
+        filter: dict | None = None,
+        score_threshold: float | None = None,
+        fetch_k: int = 20,
+    ) -> list[tuple[Document, float]]:
+
+        results = self.db.similarity_search_with_score(
+            query=query,
+            k=k,
+            filter=filter,
+            fetch_k=fetch_k,
+        )
+
+        # IndexFlatIP with normalized vectors returns
+        # cosine similarity in the range [-1, 1].
+        scored_results = [
+            (doc, (float(score) + 1.0) / 2.0)
+            for doc, score in results
+        ]
+
+        if score_threshold is not None:
+            scored_results = [
+                (doc, score)
+                for doc, score in scored_results
+                if score >= score_threshold
+            ]
+
+        return scored_results
+
+    def max_marginal_relevance_search(
+        self,
+        query: str,
+        k: int = 5,
+        fetch_k: int = 20,
+        lambda_mult: float = 0.5,
+        filter: dict | None = None,
+    ) -> list[Document]:
+
+        return self.db.max_marginal_relevance_search(
+            query=query,
+            k=k,
+            fetch_k=fetch_k,
+            lambda_mult=lambda_mult,
+            filter=filter,
+        )
+
+    def similarity_search_by_vector(
+        self,
+        embedding: list[float],
+        k: int = 5,
+        filter: dict | None = None,
+        fetch_k: int = 20,
+    ) -> list[Document]:
+
+        return self.db.similarity_search_by_vector(
+            embedding=embedding,
+            k=k,
+            filter=filter,
+            fetch_k=fetch_k,
+        )
+
+    def similarity_search_by_vector_with_score(
+        self,
+        embedding: list[float],
+        k: int = 5,
+        filter: dict | None = None,
+        fetch_k: int = 20,
+    ) -> list[tuple[Document, float]]:
+
+        return self.db.similarity_search_with_score_by_vector(
+            embedding=embedding,
+            k=k,
+            filter=filter,
+            fetch_k=fetch_k,
+        )
+
+    def max_marginal_relevance_search_by_vector(
+        self,
+        embedding: list[float],
+        k: int = 5,
+        fetch_k: int = 20,
+        lambda_mult: float = 0.5,
+        filter: dict | None = None,
+    ) -> list[Document]:
+
+        return self.db.max_marginal_relevance_search_by_vector(
+            embedding=embedding,
+            k=k,
+            fetch_k=fetch_k,
+            lambda_mult=lambda_mult,
+            filter=filter,
         )
 
     def as_retriever(
         self,
-        search_type: str = "similarity",
+        search_type: Literal[
+            "similarity",
+            "similarity_score_threshold",
+            "mmr",
+        ] = "similarity",
         search_kwargs: dict | None = None,
     ):
 
@@ -128,6 +239,94 @@ class FAISSVectorStore:
             search_type=search_type,
             search_kwargs=search_kwargs or {"k": 5},
         )
+
+    def search(
+        self,
+        query: str,
+        search_type: Literal[
+            "similarity",
+            "relevance",
+            "distance",
+            "mmr",
+        ] = "relevance",
+        k: int = 5,
+        filter: dict | None = None,
+        score_threshold: float | None = None,
+        fetch_k: int = 20,
+        lambda_mult: float = 0.5,
+    ) -> list[Any]:
+
+        if not query or not query.strip():
+            raise ValueError("Query cannot be empty.")
+
+        if k <= 0:
+            raise ValueError("k must be greater than zero.")
+
+        if fetch_k < k:
+            raise ValueError("fetch_k must be >= k.")
+
+        if not 0 <= lambda_mult <= 1:
+            raise ValueError("lambda_mult must be between 0 and 1.")
+
+        if search_type == "similarity":
+
+            return self.similarity_search(
+                query=query,
+                k=k,
+                filter=filter,
+                fetch_k=fetch_k,
+            )
+
+        elif search_type == "relevance":
+
+            return self.similarity_search_with_relevance_scores(
+                query=query,
+                k=k,
+                filter=filter,
+                score_threshold=score_threshold,
+                fetch_k=fetch_k,
+            )
+
+        elif search_type == "distance":
+
+            # For IndexFlatIP, these are raw inner-product
+            # similarity scores, not distances.
+            return self.similarity_search_with_score(
+                query=query,
+                k=k,
+                filter=filter,
+                fetch_k=fetch_k,
+            )
+
+        elif search_type == "mmr":
+
+            return self.max_marginal_relevance_search(
+                query=query,
+                k=k,
+                fetch_k=fetch_k,
+                lambda_mult=lambda_mult,
+                filter=filter,
+            )
+
+        raise ValueError(
+            f"Unsupported search type: {search_type}"
+        )
+
+    def search_many(
+        self,
+        queries: list[str],
+        k: int = 5,
+        search_type: str = "relevance",
+    ) -> dict[str, list[Any]]:
+
+        return {
+            query: self.search(
+                query=query,
+                k=k,
+                search_type=search_type,
+            )
+            for query in queries
+        }
 
     def delete(self, ids: list[str]):
 

@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import Any, Literal
 
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
@@ -144,3 +145,201 @@ class ChromaVectorStore:
             )
             for i in range(len(result["ids"]))
         ]
+
+    def similarity_search(
+        self,
+        query: str,
+        k: int = 5,
+        filter: dict | None = None,
+    ) -> list[Document]:
+
+        return self.db.similarity_search(
+            query=query,
+            k=k,
+            filter=filter,
+        )
+    def similarity_search_with_relevance_scores(
+        self,
+        query: str,
+        k: int = 5,
+        filter: dict | None = None,
+        score_threshold: float | None = None,
+    ) -> list[tuple[Document, float]]:
+
+        kwargs = {
+            "query": query,
+            "k": k,
+            "filter": filter,
+        }
+
+        if score_threshold is not None:
+            kwargs["score_threshold"] = score_threshold
+
+        return self.db.similarity_search_with_relevance_scores(
+            **kwargs
+        )
+
+    def similarity_search_with_score(
+        self,
+        query: str,
+        k: int = 5,
+        filter: dict | None = None,
+    ) -> list[tuple[Document, float]]:
+
+        return self.db.similarity_search_with_score(
+            query=query,
+            k=k,
+            filter=filter,
+        )
+
+    def max_marginal_relevance_search(
+        self,
+        query: str,
+        k: int = 5,
+        fetch_k: int = 20,
+        lambda_mult: float = 0.5,
+        filter: dict | None = None,
+    ) -> list[Document]:
+
+        return self.db.max_marginal_relevance_search(
+            query=query,
+            k=k,
+            fetch_k=fetch_k,
+            lambda_mult=lambda_mult,
+            filter=filter,
+        )
+
+    def max_marginal_relevance_search_by_vector(
+        self,
+        embedding: list[float],
+        k: int = 5,
+        fetch_k: int = 20,
+        lambda_mult: float = 0.5,
+        filter: dict | None = None,
+    ) -> list[Document]:
+
+        return self.db.max_marginal_relevance_search_by_vector(
+            embedding=embedding,
+            k=k,
+            fetch_k=fetch_k,
+            lambda_mult=lambda_mult,
+            filter=filter,
+        )
+
+    def similarity_search_by_vector(
+        self,
+        embedding: list[float],
+        k: int = 5,
+        filter: dict | None = None,
+    ) -> list[Document]:
+
+        return self.db.similarity_search_by_vector(
+            embedding=embedding,
+            k=k,
+            filter=filter,
+        )
+
+    def similarity_search_by_vector_with_relevance_scores(
+        self,
+        embedding: list[float],
+        k: int = 5,
+        filter: dict | None = None,
+    ) -> list[tuple[Document, float]]:
+
+        return self.db.similarity_search_by_vector_with_relevance_scores(
+            embedding=embedding,
+            k=k,
+            filter=filter,
+        )
+
+    def as_retriever(
+        self,
+        search_type: Literal[
+            "similarity",
+            "similarity_score_threshold",
+            "mmr",
+        ] = "similarity",
+        search_kwargs: dict | None = None,
+    ):
+
+        return self.db.as_retriever(
+            search_type=search_type,
+            search_kwargs=search_kwargs or {"k": 5},
+        )
+
+    def search(
+        self,
+        query: str,
+        search_type: Literal[
+            "similarity",
+            "relevance",
+            "distance",
+            "mmr",
+        ] = "relevance",
+        k: int = 5,
+        filter: dict | None = None,
+        score_threshold: float | None = None,
+        fetch_k: int = 20,
+        lambda_mult: float = 0.5,
+    ) -> list[Any]:
+
+        if not query or not query.strip():
+            raise ValueError("Query cannot be empty.")
+
+        if k <= 0:
+            raise ValueError("k must be greater than zero.")
+
+        if search_type == "similarity":
+
+            return self.similarity_search(
+                query=query,
+                k=k,
+                filter=filter,
+            )
+
+        elif search_type == "relevance":
+
+            return self.similarity_search_with_relevance_scores(
+                query=query,
+                k=k,
+                filter=filter,
+                score_threshold=score_threshold,
+            )
+
+        elif search_type == "distance":
+
+            return self.similarity_search_with_score(
+                query=query,
+                k=k,
+                filter=filter,
+            )
+
+        elif search_type == "mmr":
+
+            return self.max_marginal_relevance_search(
+                query=query,
+                k=k,
+                fetch_k=fetch_k,
+                lambda_mult=lambda_mult,
+                filter=filter,
+            )
+
+        raise ValueError(
+            f"Unsupported search type: {search_type}"
+        )
+
+    def search_many(
+        self,
+        queries: list[str],
+        k: int = 5,
+        search_type: str = "relevance",
+    ) -> dict[str, list[Any]]:
+
+        return {
+            query: self.search(
+                query=query,
+                k=k,
+                search_type=search_type,
+            )
+            for query in queries
+        }
