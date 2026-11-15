@@ -249,7 +249,26 @@ class IngestionPipeline:
         #     print(chunk.page_content)
         #     print("-" * 60)
 
+        # print("=" * 60)
+
+        texts = [chunk.page_content for chunk in chunks]
+
+        vectors = self.cfg.embedding_model.encode(
+            texts,
+            show_progress_bar=True,
+            convert_to_numpy=True,
+            normalize_embeddings=True,
+        )
+
+        print("\n" + "=" * 60)
+        print(" CHUNKING COMPLETED SUCCESSFULLY")
         print("=" * 60)
+        print(f" Total embeddings generated : {len(vectors)}")
+        print(f" Embedding shape            : {vectors.shape}")
+        print(f" Embedding dimensions       : {vectors.shape[1]}")
+
+        print("=" * 60)
+        
 
 def main() -> None:
     p = argparse.ArgumentParser(description="Build the RAG vector index.")
