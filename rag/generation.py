@@ -7,6 +7,10 @@ from vectors.faiss.store import FAISSVectorStore
 from vectors.chroma.store import ChromaVectorStore
 from common import Config, SentenceTransformerEmbeddings, LLM
 
+from tracing import (setup_tracing)
+
+setup_tracing()
+
 class Retriever:
 
     def __init__(self, vectorstore):
