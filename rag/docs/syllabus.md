@@ -553,33 +553,653 @@ Software Engineering is an important stream of typical computer science, what II
 2. Java How to Program, Paul Deitel and Harvey Deitel, McGraw Hill
 3. Java: The Complete Reference, Herbert Schildt, McGraw Hill
 
+---
+
+### Year 2 Term 1
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 2101 | Algorithm Analysis | 2 | 2 | 0 |
+
+**Course Outline:** Introduction - Algorithms, Analyzing & Designing Algorithms, Correctness of Algorithms; Greedy Algorithms - Introduction to Greedy Algorithms, Greedy Choice Property, Greedy vs. Dynamic Programming, Fractional Knapsack Problem, Activity Selection Problem, Huffman Encoding, Task Scheduling Problem, Coin Changing Problem, Kruskal's and Prim's Minimum Spanning Tree Algorithms; Divide and Conquer Algorithms - Introduction to Divide and Conquer Design Technique, Quick Sort, Merge Sort, Proof of Correctness, and Run Time Analysis; Dynamic Programming - Introduction to Dynamic Programming Technique, Principle of Optimality, Optimal Substructure Property, Assembly Line Scheduling, Matrix Chain Multiplication, LCS, Viterbi Algorithm, Bitonic Euclidean Traveling Salesperson Problem and Runtime Analysis; Graph Searching and Shortest Path Problems - Breadth First Search, Depth First Search, Flow Networks, Single Source and All Pair Shortest Path Algorithms; Linear Programming -Overview of Linear Programming, Formulating Problem as Linear Programs, Simplex Algorithm and Integer Linear Programming; Selected Topics - Computational Geometry, Number Theoretic and String Matching Algorithms; NP Completeness and Approximation Algorithms - NP Completeness, Polynomial Time Verification, NP Completeness and Reducibility, NP Complete Problems and Approximation Algorithms.
+
+**References:**
+1. Thomas Corman, *Introduction to Algorithms*, Stein Pub MIT Press, 3rd Ed.
+2. Alfred V. Aho, John E. Hopcroft, Jeffrey D. Ullman, *The Design and Analysis of Computer Algorithms*, Addison Wesley Series, 1974 Ed.
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 2102 | Algorithm Analysis Lab | 1 | 0 | 1 |
+
+**Course Outline:** Introduction - Algorithms, Analyzing & Designing Algorithms, Correctness of Algorithms; Greedy Algorithms - Introduction to Greedy Algorithms, Greedy Choice Property, Greedy vs. Dynamic Programming, Fractional Knapsack Problem, Activity Selection Problem, Huffman Encoding, Task Scheduling Problem, Coin Changing Problem, Kruskal's and Prim's Minimum Spanning Tree Algorithms; Divide and Conquer Algorithms - Introduction to Divide and Conquer Design Technique, Quick Sort, Merge Sort, Proof of Correctness, and Run Time Analysis; Dynamic Programming - Introduction to Dynamic Programming Technique, Principle of Optimality, Optimal Substructure Property, Assembly Line Scheduling, Matrix Chain Multiplication, LCS, Viterbi Algorithm, Bitonic Euclidean Traveling Salesperson Problem and Runtime Analysis; Graph Searching and Shortest Path Problems - Breadth First Search, Depth First Search, Flow Networks, Single Source and All Pair Shortest Path Algorithms; Linear Programming -Overview of Linear Programming, Formulating Problem as Linear Programs, Simplex Algorithm and Integer Linear Programming; Selected Topics - Computational Geometry, Number Theoretic and String Matching Algorithms; NP Completeness and Approximation Algorithms - NP Completeness, Polynomial Time Verification, NP Completeness and Reducibility, NP Complete Problems and Approximation Algorithms.
+
+**References:**
+1. Thomas Corman, *Introduction to Algorithms*, Stein Pub MIT Press, 3rd Ed.
+2. Alfred V. Aho, John E. Hopcroft, Jeffrey D. Ullman, *The Design and Analysis of Computer Algorithms*, Addison Wesley Series, 1974 Ed.
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 2103 | Theory of Computation | 2 | 2 | 0 |
+
+**Course Outline:** Brief Review of mathematical background: Binary relations, digraph, string, languages, proofs, inductive definitions; Finite automata and regular expressions: Deterministic and non-deterministic finite automata, regular expressions and regular sets, Kleene's Theorem; Properties of regular sets: pumping lemma, closure properties, decision algorithms; Context Free grammar and languages: Context-free grammars, regular grammars; Simplified forms and normal forms: useful symbols, productions, unit productions, chomsky normal form; Pushdown automata: pushdown automaton, equivalence between pushdown automata and context-free languages; Turing machine: introduction to Turing machines.
+
+**References:**
+1. Introduction to Automata Theory, Languages, and Computation by John E. Hopcroft, Rajeev Motwani, Jeffrey D. Ullman, Third Edition, Pearson Education.
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 2104 | Theory of Computation Lab | 1 | 0 | 1 |
+
+**Course Outline:** Brief Review of mathematical background: Binary relations, digraph, string, languages, proofs, inductive definitions; Finite automata and regular expressions: Deterministic and non-deterministic finite automata, regular expressions and regular sets, Kleene's Theorem; Properties of regular sets: pumping lemma, closure properties, decision algorithms; Context Free grammar and languages: Context-free grammars, regular grammars; Simplified forms and normal forms: useful symbols, productions, unit productions, chomsky normal form; Pushdown automata: pushdown automaton, equivalence between pushdown automata and context-free languages; Turing machine: introduction to Turing machines.
+
+**References:**
+1. Introduction to Automata Theory, Languages, and Computation by John E. Hopcroft, Rajeev Motwani, Jeffrey D. Ullman, Third Edition, Pearson Education.
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 2105 | Computer Networks | 2 | 2 | 0 |
+
+**Course Outline:** Introduction: Overview of the Internet, Overview of Networking Protocols, Network Edge, Network Core, Protocol Layers / Service Model, General Networking Example; Application Layer: Principles of Networking Applications, Web and HTTP, FTP, E-mail, DNS; Transport Layer: Transport Layer Services, Multiplexing and De multiplexing, Connectionless Transport: UDP, Principles of Reliable Data Transport, Connection-Oriented Transport: TCP, Principles of Congestion Control, TCP Congestion Control; Network Layer: Datagram Networks, Inside a Router, Details of the Internet Protocol (IP), IP Sub netting, Routing Algorithms (Link State, Distance Vector), Routing in the Internet (Routing Information Protocol (RIP), Open Shortest Path First (OSPF), Border Gateway Protocol (BGP)).
+
+**References:**
+1. Data Communications and Networking, B. A. Forouzan, 5/e
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 2106 | Computer Networks Lab | 1 | 0 | 1 |
+
+**Course Outline:** Introduction: Overview of the Internet, Overview of Networking Protocols, Network Edge, Network Core, Protocol Layers / Service Model, General Networking Example; Application Layer: Principles of Networking Applications, Web and HTTP, FTP, E-mail, DNS; Transport Layer: Transport Layer Services, Multiplexing and De multiplexing, Connectionless Transport: UDP, Principles of Reliable Data Transport, Connection-Oriented Transport: TCP, Principles of Congestion Control, TCP Congestion Control; Network Layer: Datagram Networks, Inside a Router, Details of the Internet Protocol (IP), IP Sub netting, Routing Algorithms (Link State, Distance Vector), Routing in the Internet (Routing Information Protocol (RIP), Open Shortest Path First (OSPF), Border Gateway Protocol (BGP)).
+
+**References:**
+1. Data Communications and Networking, B. A. Forouzan, 5/e
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| MATH 2107 | Numerical Analysis for Engineers | 2 | 2 | 0 |
+
+**Outline:** Introductory concepts and calculus review, 'C' programming, the sources and propagation of errors, root finding for nonlinear equations, solution of system of linear equations, interpolation and approximation theory, numerical integration and differentiation.
+
+**References:**
+1. Numerical Methods, E Balagurusamy, Tata McGraw-Hill Publishing Company, 2002
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| MATH 2108 | Numerical Analysis for Engineers Lab | 1 | 0 | 1 |
+
+**Outline:** Introductory concepts and calculus review, 'C' programming, the sources and propagation of errors, root finding for nonlinear equations, solution of system of linear equations, interpolation and approximation thory, numerical integration and differentiation.
+
+**References:**
+1. Numerical Methods, E Balagurusamy, Tata McGraw-Hill Publishing Company, 2002
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 2109 | Object Oriented Concepts II | 2 | 2 | 0 |
+
+**Course Outline: Object Oriented Concepts -** Review of Object Oriented Concept - Object Data, Object Behaviors, Class, Attributes, Methods, Encapsulation and Data Hiding: Interfaces and Implementations, Inheritance: Super classes and Sub classes, Abstraction and Is-A relationship, Polymorphism, Compositions: Abstractions and Has-A Relationship; Mastering Composition and Building Objects – Representing Composition with UML, Composition Relationships, Building in Phases, Types of Composition: Aggregation and Associations, Avoiding Dependencies and Cardinality; Details of Creating Object Models with UML – Class Diagram, Attributes and Methods, Access Designations, Inheritance, Interfaces, Composition: Aggregations and Associations, and Cardinality; Objects and Portable Data - Portable Data, The Extensible Markup Language (XML), XML Versus HTML, XML and Object-Oriented Languages, Validating the Document with the Document Type Definition (DTD), Integrating the DTD into the XML Document, and Using Cascading Style Sheets; Persistence objects – Basics of Persistence, Saving to a Flat File, Using XML in the Serialization Process and Writing to a Relational Database; Objects and the Internet – Object-Based Scripting Languages, Objects in a Web Page and Distributed Objects and the Enterprise; Objects and Client/Server Applications – Client/Server Approaches, Proprietary Approaches and Nonproprietary Approaches; Object Oriented Design Principles - Single Responsibility Principle, Open/Close Principle, Liskov Substitution Principial, Interface Segregation Principle and Dependency Inversion Principle; Introduction to Component Based Design, Design Patterns and Code Smells.
+
+**Programming lessons -** Object Oriented Programming (OOP) - The students will implement each of the object oriented concepts which are discussed in the class. Java features to support practical OOP – Generics: Wildcard, Generic class definitions, Generic method definitions, Using generics; Collection Framework: Collection interfaces, List and SortedList, Map and SortedMap, Navigable Map, Set and Sorted Set, Navigable Set, Queue and DeQueue, Stack, hashCode() and equals(), Comparator and Comparable; Reflection: The *Class* Class, reflect package, Fields and Methods, Exception Handling and Reflections and Dynamic Programming; Multi-Threaded Programming: Overview of Thread, Java Thread Model, Creating and Running Thread, Thread Pools, Thread Synchronization, wait and notify, join and sleep and The concurrency API; User Interface: Swing, Components, Container, Events, Layouts and SwingWorker; Serialization: Serializable interface, Writing and Reading an Object, Handling Exceptions, Customized Serialization and Controlling Serialization; Socket Programming: Clients and Servers, Ports, Addresses and Protocols, Communication using I/O, Servers, The ServerSocket Class, The URL lass and URLConnction Class; Java Servlet Programming: Introduction To Servlet, Servlet Life cycle, HttpServlet, HttpRequest, HttpResponse, RequestDispatcher, HttpSession and ServletContext, Servlet Configuration, Cookies, Servlet Filters and Http Headers and MIME types; The Java Beans AOI: Introspector, PropertyDescriptor, EventSetDescriptor and MethodDescriptor.
+
+**References:**
+1. The Object Oriented Thought Process, Matt Weisfeld, Addison-Wesley
+2. Java How to Program, Paul Deitel and Harvey Deitel, McGraw Hill
+3. Java: The Complete Reference, Herbert Schildt, McGraw Hill
+4. Head First Java by Kathy Sierra and Bert Bates, O Reilly
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 2110 | Object Oriented Concepts II Lab | 1 | 0 | 1 |
+
+**Course Outline: Object Oriented Concepts -** Review of Object Oriented Concept - Object Data, Object Behaviors, Class, Attributes, Methods, Encapsulation and Data Hiding: Interfaces and Implementations, Inheritance: Super classes and Sub classes, Abstraction and Is-A relationship, Polymorphism, Compositions: Abstractions and Has-A Relationship; Mastering Composition and Building Objects – Representing Composition with UML, Composition Relationships, Building in Phases, Types of Composition: Aggregation and Associations, Avoiding Dependencies and Cardinality; Details of Creating Object Models with UML – Class Diagram, Attributes and Methods, Access Designations, Inheritance, Interfaces, Composition: Aggregations and Associations, and Cardinality; Objects and Portable Data - Portable Data, The Extensible Markup Language (XML), XML Versus HTML, XML and Object-Oriented Languages, Validating the Document with the Document Type Definition (DTD), Integrating the DTD into the XML Document, and Using Cascading Style Sheets; Persistence objects – Basics of Persistence, Saving to a Flat File, Using XML in the Serialization Process and Writing to a Relational Database; Objects and the Internet – Object-Based Scripting Languages, Objects in a Web Page and Distributed Objects and the Enterprise; Objects and Client/Server Applications – Client/Server Approaches, Proprietary Approaches and Nonproprietary Approaches; Object Oriented Design Principles - Single Responsibility Principle, Open/Close Principle, Liskov Substitution Principial, Interface Segregation Principle and Dependency Inversion Principle; Introduction to Component Based Design, Design Patterns and Code Smells.
+
+**Programming lessons -** Object Oriented Programming (OOP) - The students will implement each of the object oriented concepts which are discussed in the class. Java features to support practical OOP – Generics: Wildcard, Generic class definitions, Generic method definitions, Using generics; Collection Framework: Collection interfaces, List and SortedList, Map and SortedMap, Navigable Map, Set and Sorted Set, Navigable Set, Queue and DeQueue, Stack, hashCode() and equals(), Comparator and Comparable; Reflection: The *Class* Class, reflect package, Fields and Methods, Exception Handling and Reflections and Dynamic Programming; Multi-Threaded Programming: Overview of Thread, Java Thread Model, Creating and Running Thread, Thread Pools, Thread Synchronization, wait and notify, join and sleep and The concurrency API; User Interface: Swing, Components, Container, Events, Layouts and SwingWorker; Serialization: Serializable interface, Writing and Reading an Object, Handling Exceptions, Customized Serialization and Controlling Serialization; Socket Programming: Clients and Servers, Ports, Addresses and Protocols, Communication using I/O, Servers, The ServerSocket Class, The URL lass and URLConnction Class; Java Servlet Programming: Introduction To Servlet, Servlet Life cycle, HttpServlet, HttpRequest, HttpResponse, RequestDispatcher, HttpSession and ServletContext, Servlet Configuration, Cookies, Servlet Filters and Http Headers and MIME types; The Java Beans AOI: Introspector, PropertyDescriptor, EventSetDescriptor and MethodDescriptor.
+
+**References:**
+1. The Object Oriented Thought Process, Matt Weisfeld, Addison-Wesley
+2. Java How to Program, Paul Deitel and Harvey Deitel, McGraw Hill
+3. Java: The Complete Reference, Herbert Schildt, McGraw Hill
+4. Head First Java by Kathy Sierra and Bert Bates, O Reilly
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 2112 | Software project Lab I | 3 | 0 | 3 |
+
+**Course Outline:** Each of the students should complete the software project separately. They will be marked based on their individual software. Student will be encouraged to develop software which requires significant "problem solving" effort. The project should be sufficiently large and the size of the project will mostly depend on "problem solving" effort. Besides, students must showcase the skills they have acquired from their so far completed courses.
+
+---
+
+### Year 2 Term 2
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 2201 | Operating Systems and System Programming | 2 | 2 | 0 |
+
+**Course Outline:** Introduction: What is operating system? History of operating system Operating system concepts Operating system structure Processes and Threads Processes Threads Interprocess communication Scheduling Classical IPC problems Memory Management No memory abstraction Virtual memory Page replacement algorithms Design issues for paging systems Implementation issues File Systems Files Directories File system management Input / Ouput Principles of I/O hardware Principles of I/O software I/O software layers Disks Clocks Thin clients Deadlocks Resources Detection Recovery Avoidance Prevention Virtualization and Cloud
+
+**Course Reference Books:**
+1. Operating System Concepts, 7<sup>th</sup> edition, by Silberschatz, Galvin, Gagne
+2. Modern Operating Systems, 4<sup>th</sup> edition, Tanenbum, Bos
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 2202 | Operating Systems and System Programming Lab | 1 | 0 | 1 |
+
+**Course Outline:** Introduction: What is operating system? History of operating system Operating system concepts Operating system structure Processes and Threads Processes Threads Interprocess communication Scheduling Classical IPC problems Memory Management No memory abstraction Virtual memory Page replacement algorithms Design issues for paging systems Implementation issues File Systems Files Directories File system management Input / Ouput Principles of I/O hardware Principles of I/O software I/O software layers Disks Clocks Thin clients Deadlocks Resources Detection Recovery Avoidance Prevention Virtualization and Cloud
+
+**Course Reference Books:**
+1. Operating System Concepts, 7<sup>th</sup> edition, by Silberschatz, Galvin, Gagne
+2. Modern Operating Systems, 4<sup>th</sup> edition, Tanenbum, Bos
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| GE 2203 | Business Psychology | 3 | 3 | 0 |
+
+**Course Outline:** Fundamentals: Definition of Psychology, Subfields of Psychology, Major Perspectives of Psychology, Psychology in Business; Job Analysis: Job-oriented Approach, Person-oriented Approach, Purposes of Job Analysis, Methods of Job Analysis, Job Evaluation; Assessment Methods for Selection and Placement: Psychological Tests: Ability Test, Personality Test, Intelligence Test, Vocational Interest Test; Training and Development: Training Need Analysis, Training Designs, Training Methods, Evaluation of Training; Theories of Employee Motivation: Need Theories, Reinforcement Theory, Expectancy Theory, Goal Setting Theory; Job Attitude and Emotion: Nature of Job Satisfaction, Assessment of Job Satisfaction, Antecedents of Job Satisfaction, Potential Effects of Job Satisfaction, Organizational Commitment, Emotion at work; Productive and Counterproductive Employee Behavior: Productive Behavior, Job Performance; Counterproductive Behavior, Withdrawal, Aggression, Mistreatment, Sabotage, and Theft; Occupational Health Psychology: Occupational Health and Safety, Work Schedules, Occupational Stress, Work-Family Conflict, Burnout, Hawthorne Studies; Leadership: Approaches to the Understanding of Leadership Trait Approach, Leader Behavior Approach, Contingency Theory, Path-Goal Theory, Leader-Member Exchange (LMX) Theory, Transformational Leadership Theory; Organizational Development and Theory: Organizational Development Employee Acceptance of Change, Management by Objectives, Survey Feedback, Team Building, T-Group; Effectiveness of Organizational Development: Organizational Theories, Bureaucracy, Theory X and Theory Y, Open System Theory, Socio-technical System Theory.
+
+**References:**
+3. Industrial and Organizational Psychology: Research and Practice, Paul E. Spector, 5th Edition
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 2205 | Information Security | 2 | 2 | 0 |
+
+**Course Outline:** Overview: Network Security Concepts, Security Attacks, Services and Mechanisms; Classical Encryption techniques: Symmetric Cipher Model, Substitution and Permutation Ciphers, Steganography; Block Ciphers and Data Encryption Standard: Design principles and modes of operation; Public-key cryptography: Introduction to number theory, RSA and Diffie-Hellman; Message Digest: Requirements for cryptographic hash functions,MD5 ,SHA, Message authentication codes, digital signatures; Key Management and Distribution: Symmetric Key Distribution using Symmetric Encryption, Symmetric Key Distribution using asymmetric Encryption, public key distribution, public key certificates, x.509 certificates; Network and Internet Security: Transport Layer Security, Wireless LAN security, e-mail security.
+
+**References:**
+1. Information Security: Principles and Practice by Mark Stamp 2<sup>nd</sup> Edition Wiley 2011
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 2206 | Information Security Lab | 1 | 0 | 1 |
+
+**Course Outline:** Overview: Network Security Concepts, Security Attacks, Services and Mechanisms; Classical Encryption techniques: Symmetric Cipher Model, Substitution and Permutation Ciphers, Steganography; Block Ciphers and Data Encryption Standard: Design principles and modes of operation; Public-key cryptography: Introduction to number theory, RSA and Diffie-Hellman; Message Digest: Requirements for cryptographic hash functions,MD5 ,SHA, Message authentication codes, digital signatures; Key Management and Distribution: Symmetric Key Distribution using Symmetric Encryption, Symmetric Key Distribution using asymmetric Encryption, public key distribution, public key certificates, x.509 certificates; Network and Internet Security: Transport Layer Security, Wireless LAN security, e-mail security.
+
+**References:**
+1. Information Security: Principles and Practice by Mark Stamp 2<sup>nd</sup> Edition Wiley 2011
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 2207 | Database Management System-I | 2 | 2 | 0 |
+
+**Course Outline:** Introduction to Database Systems: Evolution of file processing systems, role of databases in organizations, core components of a database environment; Data Modeling: the Entity-Relationship Diagram and its symbols and constructs; The Relational Model and Normalization: relational model, normalization, transformation of an entity-relationship data diagram into a relational model; SQL - A Standard Navigation Language for Relational Databases; Overview of Object-Oriented Databases: object-oriented data model, implementation of object persistence using relational databases.
+
+**References:**
+1. Database System Concepts by Avi Silberschatz, Henry F. Korth and S. Sudarshan, Sixth Edition
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 2208 | Database Management System-I Lab | 1 | 0 | 1 |
+
+**Course Outline:** Introduction to Database Systems: Evolution of file processing systems, role of databases in organizations, core components of a database environment; Data Modeling: the Entity-Relationship Diagram and its symbols and constructs; The Relational Model and Normalization: relational model, normalization, transformation of an entity-relationship data diagram into a relational model; SQL - A Standard Navigation Language for Relational Databases; Overview of Object-Oriented Databases: object-oriented data model, implementation of object persistence using relational databases.
+
+**References:**
+1. Database System Concepts by Avi Silberschatz, Henry F. Korth and S. Sudarshan, Sixth Edition
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 2209 | Software Requirements Spec. and Analysis | 2 | 2 | 0 |
+
+**Course Outline:** Review of – The Nature of Software, Software Engineering, The Software Process, Software Engineering Practices, Generic Software Process Model, Process Assessment and Improvement, Prescriptive Process Models, Specialized Process Model and Agile Development. Requirements Engineering, Establishing the ground work, Eliciting Requirements, Negotiating Requirements, Validating Requirements, Requirements Analysis, Scenario-Based Modeling, UML Models, Data Modeling Concept, Class Based Modeling, Requirements Modeling Strategies, Flow-Oriented Model, Behavioral Model, Requirements Modeling for WebApps.
+
+**References:**
+1. R. S. Pressman, Software Engineering. A Practitioner's Approach, 7/e or higher, McGraw Hill
+2. Ian Sommerville. Software Engineering, 9<sup>th</sup> or higher Edition, Addison-Wesley.
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 2210 | Software Requirements Spec. and Analysis Lab | 1 | 0 | 1 |
+
+**Lab:** One small real life system will be given to all the students for analyzing in the class room. Three real life mid-scale systems will be distributed among groups (created randomly) of 5/6 students to analyze (one project per group). The output of both of the analysis will be specification reports.
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| BUS 2211 | Business Studies for Engineers | 3 | 3 | 0 |
+
+**Course Outline: Managers and Entrepreneurs:** Management Defined, Role of a Manager, Small-Business Management, The Evolution of Management Thought, Organization, Organization Charts, Contrasting Theories of Organization, Organizational Effectiveness, Organizational Cultures, Change, Conflict, and Negotiation in Organization; The Strategic Management Process, Strategic Implementation and Control, Forecasting. **Accounting Basic:** Forms of Business Organization, Types of Activities performed by Business Organization, Financial statements of Business Organization, The Accounting Equation, The Account and Rules of Debit and Credit, The Journal: Recording of Transaction, Adjusting the Accounts, Closing Entries, and Preparing Financial statements from the Work Sheet. **Analysis and Interpretation of Financial Statement:** Objectives of Financial Statement Analysis, Analysis of a Balance Sheet, Analysis of Statement of Income and Retained Earnings, Ratio Analysis: Liquidity Ratios, Equity or Long Term Solvency Ratio, Profitability Test, Market Test.
+
+**References:**
+1. Stephen P. Robbins and Mary Coulter, *Management*, Prentice Hall, Latest Edition
+2. Jerry J. Weygandt, Donald E. Kieso, and Paul D. Kimmel, *Accounting Principles*, Wiley, 8th Ed.
+
+---
+
+### Year 3 Term 1
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 3101 | Professional Ethics for Information Systems | 3 | 3 | 0 |
+
+**Course Outline:** Introduction to Ethics, Morals, Integrity, Ethical use of Information Technology, Ethics for IT Workers and IT Users - Trade secret, Whistle blowing, fraud, misrepresentation, bribery, professional code of ethics, IT professional malpractice and Common Ethical issues for IT users, Computer and Internet Crime - Exploit, Viruses, Phishing and Types of perpetrators, Privacy - Information privacy, fair information practices, EU data protection directive, key privacy and anonymity issues, Freedom of Expression - Right to freedom of expression, obscene speech, hate speech, defamation, controlling access to information on the internet, anonymity on the internet, corporate blogging and pornography, Intellectual property - Copyright, fair use doctrine, patent, software patents, trade secret and key intellectual property issues, Impact of IT on society, Social networking ethical issues, Ethics for IT organization.
+
+**References:**
+1. Ethics In Information Technology, George W. Reynolds
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 3103 | Web Technology | 1 | 1 | 0 |
+
+**Course Outline:** Introduction To Html, Java Script & CSS, Server Side Programming: HTTP Server, Application Server, MVC Web Framework, Web Services, Database Access: Object Relational Mapping, Lambda Expression, Language Integrated Query, Data Reader, Writer, Web Security: Denial of Service, Buffer Overflow, Cross Site Scripting, Authentication and Access Control
+
+**References:**
+1. Deitel & Deitel, Goldberg, "Internet and world wide web – How to Program", Pearson Education Asia, 2001.
+2. Rajkamal, "Web Technology", Tata McGraw-Hill, 2001.
+3. Teach yourself web technologies part I & II- I. Bayross. BPB
+4. Web Design in a Nutshell- J. Niederst, SPD
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 3104 | Web Technology Lab | 2 | 0 | 2 |
+
+**Course Outline:** Introduction To Html, Java Script & CSS, Server Side Programming: HTTP Server, Application Server, MVC Web Framework, Web Services, Database Access: Object Relational Mapping, Lambda Expression, Language Integrated Query, Data Reader, Writer, Web Security: Denial of Service, Buffer Overflow, Cross Site Scripting, Authentication and Access Control
+
+**References:**
+1. Deitel & Deitel, Goldberg, "Internet and world wide web – How to Program", Pearson Education Asia, 2001.
+2. Rajkamal, "Web Technology", Tata McGraw-Hill, 2001.
+3. Teach yourself web technologies part I & II- I. Bayross. BPB
+4. Web Design in a Nutshell- J. Niederst, SPD
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 3105 | Data Science and Analytics – DBMS II | 1 | 1 | 0 |
+
+**Course Outline:** Indexing and Hashing: Basic Concepts, Ordered Indices, B+-Tree Index Files, B-Tree Index Files, Static Hashing, Dynamic Hashing, Comparison of Ordered Indexing and Hashing; Query Processing: Overview, Measures of Query Cost, Selection Operation, Sorting, Join Operation, Evaluation of Expressions; Query Optimization: Introduction, Transformation of Relational Expressions, Catalog Information for Cost Estimation, Statistical Information for Cost Estimation, Cost-based optimization; Transactions: Transaction Concept, Transaction State, Concurrent Executions, Serializability; Concurrency Control: Lock-Based Protocols, Timestamp-Based Protocols; Recovery System: Failure Classification, Storage Structure, Recovery and Atomicity, Log-Based Recovery, Recovery With Concurrent Transactions; Data Analysis and Mining: Data Mining, Decision tree, Bayes theory, Randomize tree; Database System Architectures: Centralized and Client-Server Systems, Server System Architectures, Parallel Systems, Distributed Systems, Network Types; Parallel Databases: Introduction, I/O Parallelism, Interquery Parallelism, Intraquery Parallelism, Intraoperation Parallelism, Interoperation Parallelism; Distributed Databases: Heterogeneous and Homogeneous Databases: Distributed Data Storage, Distributed Transactions, Commit Protocols; Additional should be included: Database Design, Database Tuning Security and Authorization, Multidimensional query.
+
+**References:**
+1. Ramez Elmasri and Shamkant B. Navathe Fundamentals of Database Systems. Third Edition. Addison-Wesley Pub Co, 1999.
+2. Database Systems: The Complete Book, Hector Garcia-Molina, Jeffrey D. Ullman and Jennifer D. Widom Prentice Hall. (best supporting book)
+3. Fundamentals of Database Systems, by Ramez Elmasri and Shamkant Navathe, Addison Wesley.
+4. Database System Concepts, Fifth Edition, Avi Silberschatz, Henry F. Korth, S. Sudarshan (text book)
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 3106 | Data Science and Analytics – DBMS II Lab | 2 | 0 | 2 |
+
+**Course Outline:** Indexing and Hashing: Basic Concepts, Ordered Indices, B+-Tree Index Files, B-Tree Index Files, Static Hashing, Dynamic Hashing, Comparison of Ordered Indexing and Hashing; Query Processing: Overview, Measures of Query Cost, Selection Operation, Sorting, Join Operation, Evaluation of Expressions; Query Optimization: Introduction, Transformation of Relational Expressions, Catalog Information for Cost Estimation, Statistical Information for Cost Estimation, Cost-based optimization; Transactions: Transaction Concept, Transaction State, Concurrent Executions, Serializability; Concurrency Control: Lock-Based Protocols, Timestamp-Based Protocols; Recovery System: Failure Classification, Storage Structure, Recovery and Atomicity, Log-Based Recovery, Recovery With Concurrent Transactions; Data Analysis and Mining: Data Mining, Decision tree, Bayes theory, Randomize tree; Database System Architectures: Centralized and Client-Server Systems, Server System Architectures, Parallel Systems, Distributed Systems, Network Types; Parallel Databases: Introduction, I/O Parallelism, Interquery Parallelism, Intraquery Parallelism, Intraoperation Parallelism, Interoperation Parallelism; Distributed Databases: Heterogeneous and Homogeneous Databases: Distributed Data Storage, Distributed Transactions, Commit Protocols; Additional should be included: Database Design, Database Tuning Security and Authorization, Multidimensional query.
+
+**References:**
+1. Ramez Elmasri and Shamkant B. Navathe Fundamentals of Database Systems. Third Edition. Addison-Wesley Pub Co, 1999.
+2. Database Systems: The Complete Book, Hector Garcia-Molina, Jeffrey D. Ullman and Jennifer D. Widom Prentice Hall. (best supporting book)
+3. Fundamentals of Database Systems, by Ramez Elmasri and Shamkant Navathe, Addison Wesley.
+4. Database System Concepts, Fifth Edition, Avi Silberschatz, Henry F. Korth, S. Sudarshan (text book)
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| BUS 3107 | Business Communications | 2 | 2 | 0 |
+
+**Course Outline: Communication Concept:** The Role of Communication in Business, Importance of Communication Skills, Main Form of Business Communication, Process of Human Communication. **Fundamentals of Business Writing:** Adaptation and the Selection of Words, Construction of Clear Sentences and Paragraphs, Writing for Effect. **Basic Pattern of Business Messages:** Directness in Good News and Neutral Situations, Indirectness in Bad Message, Indirectness in Persuasion Message, Letter and Memorandum, Letter Writing Styles, Pattern Variations in Memorandums and the Email, Job Search Activities: Strategies in the Job Search Process, Job search activities, Writing CV, Facing Interviews, Feedback letters for goodwill, **Fundamentals of Report Writing:** Basics of Report Writing, Report Structure: The Short Forms, Long and Formal Report, Usages of Graphics. **Other Form of Business Communication:** Informal Oral Communication, Technology-Enabled Communication.
+
+**References:**
+1. Raymond V. Lesikar, John D. Pettit, Maire E. Flatley, Lesikar's Basic Business Communication, Mc Graw Hill.
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| BUS 3108 | Business Communications Lab | 1 | 0 | 1 |
+
+**Course Outline: Communication Concept:** The Role of Communication in Business, Importance of Communication Skills, Main Form of Business Communication, Process of Human Communication. **Fundamentals of Business Writing:** Adaptation and the Selection of Words, Construction of Clear Sentences and Paragraphs, Writing for Effect. **Basic Pattern of Business Messages:** Directness in Good News and Neutral Situations, Indirectness in Bad Message, Indirectness in Persuasion Message, Letter and Memorandum, Letter Writing Styles, Pattern Variations in Memorandums and the Email, Job Search Activities: Strategies in the Job Search Process, Job search activities, Writing CV, Facing Interviews, Feedback letters for goodwill, **Fundamentals of Report Writing:** Basics of Report Writing, Report Structure: The Short Forms, Long and Formal Report, Usages of Graphics. **Other Form of Business Communication:** Informal Oral Communication, Technology-Enabled Communication.
+
+**References:**
+1. Raymond V. Lesikar, John D. Pettit, Maire E. Flatley, Lesikar's Basic Business Communication, Mc Graw Hill.
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 3109 | Design Pattern | 2 | 2 | 0 |
+
+**Course Outline:** Revision of Concepts of OOP, Importance of learning design patterns, Types of Design Patterns - Structural, Behavioral and Creational Patterns, Creational Patterns – Singleton, Factory, Factory Method, Abstract Factory, Builder, Prototype and Object Pool, Behavioral Patterns - Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, Strategy, Template Method, Visitor and Null Object, Structural Patterns – Adapter, Bridge, Composite, Decorator, Flyweight and Proxy, REFACTORING CODE SMELL, Different type of code smells - Inappropriate Naming, Comments, Dead Code, Duplicated code, Primitive Obsession, Large Class, Lazy Class, Alternative Class with Different Interface, Long Method, Long Parameter List, Switch Statements, Speculative Generality, Oddball Solution, Feature Envy, Refused Bequest, Black Sheep and Train Wreck, Design Principles (SOLID) - Single responsibility principle, Open Close Principle, Liskov substitution principle, Interface segregation principle, Dependency Inversion principle.
+
+**References:**
+1. Gamma, Erich. *Design patterns: elements of reusable object-oriented software*. Pearson Education, 1995.
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 3110 | Design Pattern Lab | 1 | 0 | 1 |
+
+**Course Outline:** Revision of Concepts of OOP, Importance of learning design patterns, Types of Design Patterns - Structural, Behavioral and Creational Patterns, Creational Patterns – Singleton, Factory, Factory Method, Abstract Factory, Builder, Prototype and Object Pool, Behavioral Patterns - Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, Strategy, Template Method, Visitor and Null Object, Structural Patterns – Adapter, Bridge, Composite, Decorator, Flyweight and Proxy, REFACTORING CODE SMELL, Different type of code smells - Inappropriate Naming, Comments, Dead Code, Duplicated code, Primitive Obsession, Large Class, Lazy Class, Alternative Class with Different Interface, Long Method, Long Parameter List, Switch Statements, Speculative Generality, Oddball Solution, Feature Envy, Refused Bequest, Black Sheep and Train Wreck, Design Principles (SOLID) - Single responsibility principle, Open Close Principle, Liskov substitution principle, Interface segregation principle, Dependency Inversion principle.
+
+**References:**
+1. Gamma, Erich. *Design patterns: elements of reusable object-oriented software*. Pearson Education, 1995.
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 3112 | Software Project Lab II | 3 | 0 | 3 |
+
+**Course Outline:** Students will create project teams of 3 members each. Number of team members can be varied for special cases, decided by the assigned course manager. All the project teams are required to prepare their Software Requirements Specification (SRS) first, and later develop the project accordingly.
+
+---
+
+### Year 3 Term 2
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 3201 | Distributed Systems | 1 | 1 | 0 |
+
+**Course Outline: Foundations -** Characterization of DS, System Models, Networking and Internetworking, Interprocess Communication, Remote Invocation, Indirect Communication and Operating System Support **Middleware** - Dist. Objects and Components, Web Services and Peer-to-Peer Systems System services – Security, Distributed File Systems and Name Services Distributed algorithms - Time and Global States, Coordination and Agreement Shared data, Transactions and Concurrency Control, Distributed Transactions, and Replication, New challenges -Mobile and Ubiquitous Computing
+
+**References:**
+1. Distributed Systems: Concepts and Design (5th Edition). George Coulouris (Author), Jean Dollimore (Author), Tim Kindberg (Author), Gordon Blair (Author)
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 3202 | Distributed Systems Lab | 2 | 0 | 2 |
+
+**Lab:** Introduction to Message passing technology and its applications, Sockets Programming, Remote Procedure Calls code implementation, Synchronization assignments, Group Communication code implementation, Distributed mutual exclusion assignment, Implementation of Election Algorithms, Implementation of Distributed File system: MapReduce, Spanner, Distributed Systems Design assignments: Cloud Services and Content Delivery Networks configuration.
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 3203 | Software Metrics | 2 | 2 | 0 |
+
+**Course Outline:** Overview of Software Metrics, The basics of Measurement, Goal based framework for software measurement, Empirical Investigation, Measuring Internal Attributes : Size, Measuring Internal Attributes : Structure, Measuring Cost and Effort, Measuring External product attributes : Quality, Measuring Software Reliability, Object Oriented Metrics, For hands-on experiences: Students will implement different software metrics calculation related algorithms, utilize existing industry related tools for measuring software metrics and compare it with their implementations to gain concrete idea.
+
+**References:**
+1. Software metrics- A Rigorous and Practical Approach, (3<sup>rd</sup> Edition) Norman Fenton, and Jones Bieman.
+2. Software Measurement and Estimation: A practical Approach (1st Edition) Linda M. Laird, and
+M. Carol Brennan
 
 
+1. Software metrics- A Rigorous and Practical Approach, (3<sup>rd</sup> Edition) Norman Fenton, and Jones Bieman.
+2. Software Measurement and Estimation: A practical Approach (1<sup>st</sup> Edition) Linda M. Laird, and M. Carol Brennan
 
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 3204 | Software Metrics Lab | 1 | 0 | 1 |
 
+**Course Outline:** Overview of Software Metrics, The basics of Measurement, Goal based framework for software measurement, Empirical Investigation, Measuring Internal Attributes : Size, Measuring Internal Attributes : Structure, Measuring Cost and Effort, Measuring External product attributes : Quality, Measuring Software Reliability, Object Oriented Metrics, For hands-on experiences: Students will implement different software metrics calculation related algorithms, utilize existing industry related tools for measuring software metrics and compare it with their implementations to gain concrete idea.
 
+**References:**
+1. Software metrics- A Rigorous and Practical Approach, (3<sup>rd</sup> Edition) Norman Fenton, and Jones Bieman.
+2. Software Measurement and Estimation: A practical Approach (1<sup>st</sup> Edition) Linda M. Laird, and M. Carol Brennan
 
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 3205 | Software Security | 2 | 2 | 0 |
 
+**Course Outline:** Introduction: Security principles, concept of computer security, security services and policies Security risks: Database security, operating systems security, secure coding Countermeasures: methodologies and tools for identifying and eliminating security vulnerabilities, techniques to prove the absence of vulnerabilities, and ways to avoid security holes in new software. Secure software design: essential guidelines for building secure software, information security standards
 
+**Suggested Readings:**
+1. Security in Computing, 4th Edition, by Charles P. Pfleeger , Publisher: Prentice Hall; 4th edition
+2. Computer security: principles and practices, by William Stallings and Lawrie Brown, 2nd Edition,
+3. Brian Chess and Jacob West, Secure Programming with Static Analysis (required)
+4. David A. Wheeler, Secure Programming for Linux and Unix HOWTO Version 3.5, Aug 2004 (required)
+5. Goertzel et al, Software Security Assurance State of the Art Report, May 2007.
+6. Aleph One, Smashing the Stack for Fun and Profit. Phrack Vol 7, Nr. 49
+7. Tim Newsham, Format String Attacks, Guardent tech report, Sept 2000
 
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 3206 | Software Security Lab | 1 | 0 | 1 |
 
+**Course Outline:** Introduction: Security principles, concept of computer security, security services and policies Security risks: Database security, operating systems security, secure coding Countermeasures: methodologies and tools for identifying and eliminating security vulnerabilities, techniques to prove the absence of vulnerabilities, and ways to avoid security holes in new software. Secure software design: essential guidelines for building secure software, information security standards
 
+**Suggested Readings:**
+1. Security in Computing, 4th Edition, by Charles P. Pfleeger , Publisher: Prentice Hall; 4th edition
+2. Computer security: principles and practices, by William Stallings and Lawrie Brown, 2nd Edition,
+3. Brian Chess and Jacob West, Secure Programming with Static Analysis (required)
+4. David A. Wheeler, Secure Programming for Linux and Unix HOWTO Version 3.5, Aug 2004 (required)
+5. Goertzel et al, Software Security Assurance State of the Art Report, May 2007.
+6. Aleph One, Smashing the Stack for Fun and Profit. Phrack Vol 7, Nr. 49
+7. Tim Newsham, Format String Attacks, Guardent tech report, Sept 2000
 
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 3207 | Artificial Intelligence | 2 | 2 | 0 |
 
+**Course Outline:** Intelligent Agents and their Environments - The concept of a Rational Agent, Specifying the Task environment (PEAS description), Different characteristics of environments (Fully vs Partially observable, Static vs Dynamic, Episodic vs Sequential etc.) and Different types of agents (Reflex, Goal-based, Utility-based etc.),Search - Formulating a search problem , Uninformed Search strategies: BFS, DFS, DLS, ID-DFS, their working principles, complexities, relative advantages and disadvantages, Informed (heuristic) Search strategies: Greedy Best-first search, A\* search: Working principle, Characteristics of heuristics (admissibility and consistency), Proof of A\*'s optimality, Local search: Hill Climbing, Searching with non-deterministic actions: AND-OR search trees and Searching with partial observability: Belief state-space search, Adversarial Search - Formulation of a Game tree, The minimax algorithm, Alpha-Beta pruning: Its rationale, working principle and Additional techniques such as Move ordering and Search cut-off, Probabilistic Reasoning - Bayes' rule and its uses, Bayesian Network: Building a Bayes-net and making inference from it, Markov Chains and Hidden Markov Models: Transition and Sensor models, Building and HMM, applications of HMM, Inference in temporal models: Filtering, Prediction, Most Likely explanations (Viterbi algorithm) etc. and Particle Filters: basic working principle, Making Decisions - Decision theory and Utility theory: Lottery, Utility functions, Maximum Expected Utility principle, Constraints of Utility (Orderability, Transitivity etc) and Markov Decision Processes: Policies, Rewards, Optimal policies and the Utility of States, Value Iteration, Supervised Learning - Basic concepts of classification and supervised learning: Training set, Test set, Overfitting, Underfitting etc., Decision trees: Basic understanding, Learning a Decision tree through entropy calculation, Nearest Neighbor classifier: Basic working principle, Relative advantages and disadvantages, Naive Bayes classifier: Basic working principle, Calculating classification procedures, Relative advantages and disadvantages, Artificial Neural Network: Basic working principle, Basic structure and calculation of a perceptron, Basics of backpropagation algorithm and Support Vector Machines: Basic working principle, Unsupervised Learning (Clustering) - Basic concepts and applications of Clustering, Different types of Clustering: Partitional vs. Hierarchical, Exclusive vs Overlapping vs Fuzzy, Complete vs Partial, K-means Clustering: Basic working principle, characteristics, advantages, disadvantages, Agglomerative Hierarchical Clustering: Basic concepts, Representations (Dendrograms and Nested cluster diagrams), Different techniques to define cluster proximity: Single link, Complete link, Group average, Centroid method, their relative advantages and disadvantages and DBSCAN: Basic principle and applications, Classification of points (Core, Border and Noise), Reinforcement Learning - Understanding basics of Reinforcement Learning: MDPs, Policies, Rewards, Utilities etc., Passive and Active Reinforcement Learning, Exploration and Exploitation, Adaptive Dynamic Programming, Temporal Difference Learning and Q-Learning.
 
+**References:**
+1. Russell, Stuart, and Peter Norvig. "Artificial intelligence: a modern approach." (1995).
 
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 3208 | Artificial Intelligence Lab | 1 | 0 | 1 |
 
+**Course Outline:** Intelligent Agents and their Environments - The concept of a Rational Agent, Specifying the Task environment (PEAS description), Different characteristics of environments (Fully vs Partially observable, Static vs Dynamic, Episodic vs Sequential etc.) and Different types of agents (Reflex, Goal-based, Utility-based etc.),Search - Formulating a search problem , Uninformed Search strategies: BFS, DFS, DLS, ID-DFS, their working principles, complexities, relative advantages and disadvantages, Informed (heuristic) Search strategies: Greedy Best-first search, A\* search: Working principle, Characteristics of heuristics (admissibility and consistency), Proof of A\*'s optimality, Local search: Hill Climbing, Searching with non-deterministic actions: AND-OR search trees and Searching with partial observability: Belief state-space search, Adversarial Search - Formulation of a Game tree, The minimax algorithm, Alpha-Beta pruning: Its rationale, working principle and Additional techniques such as Move ordering and Search cut-off, Probabilistic Reasoning - Bayes' rule and its uses, Bayesian Network: Building a Bayes-net and making inference from it, Markov Chains and Hidden Markov Models: Transition and Sensor models, Building and HMM, applications of HMM, Inference in temporal models: Filtering, Prediction, Most Likely explanations (Viterbi algorithm) etc. and Particle Filters: basic working principle, Making Decisions - Decision theory and Utility theory: Lottery, Utility functions, Maximum Expected Utility principle, Constraints of Utility (Orderability, Transitivity etc) and Markov Decision Processes: Policies, Rewards, Optimal policies and the Utility of States, Value Iteration, Supervised Learning - Basic concepts of classification and supervised learning: Training set, Test set, Overfitting, Underfitting etc., Decision trees: Basic understanding, Learning a Decision tree through entropy calculation, Nearest Neighbor classifier: Basic working principle, Relative advantages and disadvantages, Naive Bayes classifier: Basic working principle, Calculating classification procedures, Relative advantages and disadvantages, Artificial Neural Network: Basic working principle, Basic structure and calculation of a perceptron, Basics of backpropagation algorithm and Support Vector Machines: Basic working principle, Unsupervised Learning (Clustering) - Basic concepts and applications of Clustering, Different types of Clustering: Partitional vs. Hierarchical, Exclusive vs Overlapping vs Fuzzy, Complete vs Partial, K-means Clustering: Basic working principle, characteristics, advantages, disadvantages, Agglomerative Hierarchical Clustering: Basic concepts, Representations (Dendrograms and Nested cluster diagrams), Different techniques to define cluster proximity: Single link, Complete link, Group average, Centroid method, their relative advantages and disadvantages and DBSCAN: Basic principle and applications, Classification of points (Core, Border and Noise), Reinforcement Learning - Understanding basics of Reinforcement Learning: MDPs, Policies, Rewards, Utilities etc., Passive and Active Reinforcement Learning, Exploration and Exploitation, Adaptive Dynamic Programming, Temporal Difference Learning and Q-Learning.
 
+**References:**
+1. Russell, Stuart, and Peter Norvig. "Artificial intelligence: a modern approach." (1995).
 
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 3209 | Software Testing and Quality Assurance | 2 | 2 | 0 |
 
+**Course Outline:** The Psychology and Economics of Software Testing, Software Testing Life Cycle (STLC), Software Testing Terminology and Methodology, V&V Model, Dynamic Black Box Testing – Boundary Value Analysis, Equivalence Partitioning, State Transition based Testing, Decision Table based Testing, Cause-Effect Graphing based Testing and Error Guessing, Dynamic White Box Testing – Basis Path Testing, Data Flow Testing and Mutation Testing, Inspections, Walkthroughs, Technical Reviews, Unit Testing, Integration Testing, Function Testing, System Testing, Acceptance Testing, Regression Testing, Test Management – Test Organization, Test Plan, Test Design and Specifications, Software Metrics, Software Quality, Quality Control and Quality Assurance, Quality Management and Project Management, Software Quality Metrics, Testing Internet Applications - Security and Performance Testing, Debugging, Test Driven Development (TDD), Behavior Driven Development (BDD). **Tools and Project** - The students will be divided into small groups having at most 3 members and a class project will be given to them for preparing a system test case. They must validate the requirements and create Mock UIs during the preparation of test cases. Besides, each of the students will relate their learnings on unit, regression, performance and security testing, debugging, behavior driven development via different tools like JUnit, Selenium, Apache JMeter, Sprajax, Sqlninja, Bugzilla, Cucumber
 
+**References:**
+1. Naresh Chauhan, Software Testing: Principles and Practices, 1<sup>st</sup> or higher Edition, Oxford University Press.
+2. Glenford J. Myers, Corey Sandler, and Tom Badgett. The Art of Software Testing, 3<sup>rd</sup> or higher Edition, John Wiley & Sons.
+2. **Lisa Crispin and Janet Gregory. Agile Testing: A Practical Guide for Testers and Agile Teams, 1<sup>st</sup> or higher Edition, Pearson Education.**
 
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 3210 | Software Testing and Quality Assurance Lab | 1 | 0 | 1 |
 
+**Course Outline:** The Psychology and Economics of Software Testing, Software Testing Life Cycle (STLC), Software Testing Terminology and Methodology, V&V Model, Dynamic Black Box Testing – Boundary Value Analysis, Equivalence Partitioning, State Transition based Testing, Decision Table based Testing, Cause-Effect Graphing based Testing and Error Guessing, Dynamic White Box Testing – Basis Path Testing, Data Flow Testing and Mutation Testing, Inspections, Walkthroughs, Technical Reviews, Unit Testing, Integration Testing, Function Testing, System Testing, Acceptance Testing, Regression Testing, Test Management – Test Organization, Test Plan, Test Design and Specifications, Software Metrics, Software Quality, Quality Control and Quality Assurance, Quality Management and Project Management, Software Quality Metrics, Testing Internet Applications - Security and Performance Testing, Debugging, Test Driven Development (TDD), Behavior Driven Development (BDD). **Tools and Project** - The students will be divided into small groups having at most 3 members and a class project will be given to them for preparing a system test case. They must validate the requirements and create Mock UIs during the preparation of test cases. Besides, each of the students will relate their learnings on unit, regression, performance and security testing, debugging, behavior driven development via different tools like JUnit, Selenium, Apache JMeter, Sprajax, Sqlninja, Bugzilla, Cucumber
 
+**References:**
+1. Naresh Chauhan, Software Testing: Principles and Practices, 1<sup>st</sup> or higher Edition, Oxford University Press.
+2. Glenford J. Myers, Corey Sandler, and Tom Badgett. The Art of Software Testing, 3<sup>rd</sup> or higher Edition, John Wiley & Sons.
+3. **Lisa Crispin and Janet Gregory. Agile Testing: A Practical Guide for Testers and Agile Teams, 1<sup>st</sup> or higher Edition, Pearson Education.**
 
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 3211 | Software Design and Architecture | 2 | 2 | 0 |
 
+**Course Outline:** Design Concept - The Design Process, Design Concepts, The Design Model; Architectural Design: Software Architecture, Architectural Genres, Architectural Styles, Architectural Design, Assessing, Alternative Architectural Designs, Architectural Mapping Using Data Flow; Component-Level Design: What Is a Component, Designing Class-Based Components, Conducting Component-Level Design, Component-Level Design for WebApps, Designing Traditional Components, Component-Based Development; User Interface Design: The Golden Rules, User Interface Analysis and Design, Interface Analysis, Interface Design Steps, Web App Interface Design, Design Evaluation.
 
+**References:**
+1. Software Engineering – A Practitioner's Approach. 7th Edition, Roger S. Pressman
+2. Software Engineering. 9th Edition, Ian Sommerville
 
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 3212 | Software Design and Architecture Lab | 1 | 0 | 1 |
+
+**Course Outline:** Design Concept - The Design Process, Design Concepts, The Design Model; Architectural Design: Software Architecture, Architectural Genres, Architectural Styles, Architectural Design, Assessing, Alternative Architectural Designs, Architectural Mapping Using Data Flow; Component-Level Design: What Is a Component, Designing Class-Based Components, Conducting Component-Level Design, Component-Level Design for WebApps, Designing Traditional Components, Component-Based Development; User Interface Design: The Golden Rules, User Interface Analysis and Design, Interface Analysis, Interface Design Steps, Web App Interface Design, Design Evaluation.
+
+**References:**
+1. Software Engineering – A Practitioner's Approach. 7th Edition, Roger S. Pressman
+2. Software Engineering. 9th Edition, Ian Sommerville
+
+---
+
+### Year 4 Term 1
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 4100 | Internship | 18 | 0 | 18 |
+
+**Outline:** The student will work full-time as an intern to particular company for a period of six months. S/he will be evaluated based on the marks provided by the company along with the marks of at least two presentations given at IIT.
+
+---
+
+### Year 4 Term 2
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 4202 | Project | 6 | 0 | 6 |
+
+**Course Outline:** Each student can perform a software development or research project. For a research project a student has to submit a thesis. For software development project, a student should submit documents having the following: Project proposal, Software Requirements Specification, Software Design Specification, Software Test Plan and User Manual. Besides, each of the students has to give multiple intermediate presentations to report their project progress.
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 4203 | Software Maintenance | 2 | 2 | 0 |
+
+**Course Outline:** Lifecycle roadmap is presented and different types of evolution and maintenance activities are placed on it. Status within industry and research is mapped out. Evolution laws are discussed and analyses in different contexts (the traditional, component-based, and open-source). Pre delivery and transition maintenance models are studied and criteria for their success are identified. Impact analysis is studied. Different ways to manage customer problems are surveyed, both the critical (emergency) and non-critical ones. Retirement process model is considered. Finally, the quality attribute "maintainability" is discussed and compared to "bad smells". Techniques for evolutionary design in the small: refactoring. Techniques for large-scale evolutionary design, especially evolution of legacy systems. Architectural patterns for isolation/exposure of change.
+
+**References:**
+1. Effective Software Maintenance and Evolution: A Reuse-Based Approach by Stanislaw Jarzabek; Publisher Taylor & Francis
+2. Software Maintenance: Concepts and Practice By Penny Grubb, Armstrong A. Takang 2nd edition World Scientific USA.
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 4204 | Software Maintenance Lab | 1 | 0 | 1 |
+
+**Course Outline:** Lifecycle roadmap is presented and different types of evolution and maintenance activities are placed on it. Status within industry and research is mapped out. Evolution laws are discussed and analyses in different contexts (the traditional, component-based, and open-source). Pre delivery and transition maintenance models are studied and criteria for their success are identified. Impact analysis is studied. Different ways to manage customer problems are surveyed, both the critical (emergency) and non-critical ones. Retirement process model is considered. Finally, the quality attribute "maintainability" is discussed and compared to "bad smells". Techniques for evolutionary design in the small: refactoring. Techniques for large-scale evolutionary design, especially evolution of legacy systems. Architectural patterns for isolation/exposure of change.
+
+**References:**
+1. Effective Software Maintenance and Evolution: A Reuse-Based Approach by Stanislaw Jarzabek; Publisher Taylor & Francis
+2. Software Maintenance: Concepts and Practice By Penny Grubb, Armstrong A. Takang 2nd edition World Scientific USA.
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 4205 | Software Project Management | 2 | 2 | 0 |
+
+**Course Outline:** Introduction to Project management: Historical background and evolution, Terminologies, Software project management objectives, Scope, focus and basic rules Principles of software project management: Basic PM Skills, SPM framework, elements, stakeholders, boundaries, challenges of SPM Software Project planning: Planning objective, project plan, variations, structure of SPM plan, project estimation, estimation methods, models and decision process. PM organization and scheduling: WBS, types of WBS, functions, activities, tasks, life cycles, phasing and purpose of phasing, building project schedule, network diagrams: PERT, CPM, Bar charts, Gantt charts Software project management techniques: Use of methodologies, Managing risks and issues, Managing Quality, Configuration, Change, Crisis, Documentation, Release. Project monitoring and control: Dimensions of monitoring and control, earned value indicators (BCWS, CV, SV, CPI, SPI), backlog management, dispute and error tracking, RMMM charts Industry scenarios: Domain analysis, Business case analysis, Dynamicity, Success and failure factors, case studies
+
+**References:**
+1. Stellman, Andrew, and Jennifer Greene. *Applied software project management*. " O'Reilly Media, Inc.", 2005.
+2. Phillips, Joseph. *IT project management: on track from start to finish*. McGraw-Hill, Inc., 2002.
+3. Rubin, Kenneth S. *Essential Scrum: A practical guide to the most popular Agile process*. Addison-Wesley, 2012.
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| SE 4206 | Software Project Management Lab | 1 | 0 | 1 |
+
+**Course Outline:** Introduction to Project management: Historical background and evolution, Terminologies, Software project management objectives, Scope, focus and basic rules Principles of software project management: Basic PM Skills, SPM framework, elements, stakeholders, boundaries, challenges of SPM Software Project planning: Planning objective, project plan, variations, structure of SPM plan, project estimation, estimation methods, models and decision process. PM organization and scheduling: WBS, types of WBS, functions, activities, tasks, life cycles, phasing and purpose of phasing, building project schedule, network diagrams: PERT, CPM, Bar charts, Gantt charts Software project management techniques: Use of methodologies, Managing risks and issues, Managing Quality, Configuration, Change, Crisis, Documentation, Release. Project monitoring and control: Dimensions of monitoring and control, earned value indicators (BCWS, CV, SV, CPI, SPI), backlog management, dispute and error tracking, RMMM charts Industry scenarios: Domain analysis, Business case analysis, Dynamicity, Success and failure factors, case studies
+
+**References:**
+1. Stellman, Andrew, and Jennifer Greene. *Applied software project management*. " O'Reilly Media, Inc.", 2005.
+2. Phillips, Joseph. *IT project management: on track from start to finish*. McGraw-Hill, Inc., 2002.
+3. Rubin, Kenneth S. *Essential Scrum: A practical guide to the most popular Agile process*. Addison-Wesley, 2012.
+
+---
+
+### Elective Courses
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 804 | Information Retrieval | 3 | 2 | 1 |
+
+**Course Outline:** Boolean Retrieval: Inverted Index, Processing boolean queries, extended Boolean retrieval; Term Vocabulary and Postings lists: Document delineation and character sequence decoding, Tokenization, Dropping common terms: stop words, Normalization (equivalence classing of terms), Stemming and lemmatization, skip pointers, Biword indexes, Positional indexes; Dictionaries and tolerant retrieval: Search structures for dictionaries, General wildcard queries, k-gram indexes for wildcard queries, Spelling correction; Index Construction: Blocked sort-based indexing, Single-pass in-memory indexing, Distributed indexing, Dynamic indexing; Scoring and Ranking: Parametric and zone indexes, Term frequency and weighting, The vector space model for scoring, variant tf-idf functions; Computing scores in a complete search system: Efficient scoring and ranking, Components of an information retrieval system; Evaluation in information retrieval: Evaluation of unranked retrieval sets, Evaluation of ranked retrieval results, Assessing relevance, Results snippets; Relevance feedback and query expansion: The Rocchio algorithm for relevance feedback, Relevance feedback on the web, Evaluation of relevance feedback strategies, Global methods for query reformulation; Language models for information retrieval; Enterprise Information Retrieval: Explore the capacity of Apache Lucene as a text search framework.
+
+**References:**
+1. An Introduction to Information Retrieval by Christopher D. Manning, Prabhakar Raghavan, Hinrich Schütze, Online Edition, 2009, Cambridge University Press, Cambridge, England.
+2. Lucene in Action by Michael McCandless, Erik Hatcher, and Otis Gospodnetić, Second Edition, Manning publications.
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 825 | Data Mining and Warehousing | 3 | 2 | 1 |
+
+**Course Outline:** Introduction to Data Mining, Knowing Data (Data objects, similarities and dissimilarities, statistical descriptions and visualizations), Data Pre-processing, Data Warehousing and Online Analytical Processing, Data Cube technology, Mining frequent patterns, Classification and Cluster Analysis, Research trends in Data mining and warehousing.
+
+**References:**
+1. Data Mining: Concepts and Techniques. Jiawei Han, Micheline Kambar, Jian Pei [Text Book]
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 829 | Pattern Recognition and Image Processing | 3 | 2 | 1 |
+
+**Course Outline:** Introduction to Image Processing; Digital Image Fundamentals - Elements of Visual Perception. Light and the Electromagnetic Spectrum. Image Sensing and Acquisition. Image Sampling and Quantization. Some Basic Relationships between Pixels. Linear and Nonlinear Operations; Image Enhancement in the Spatial Domain - Background. Some Basic Gray Level Transformations. Histogram Processing. Enhancement Using Arithmetic/Logic Operations. Basics of Spatial Filtering. Smoothing Spatial Filters. Sharpening Spatial Filters. Combining Spatial Enhancement Methods; Image Enhancement in the Frequency Domain - Background. Introduction to the Fourier Transform and the Frequency Domain. Smoothing Frequency-Domain Filters. Sharpening Frequency Domain Filters. Homomorphic Filtering. Implementation; Image Restoration - A Model of the Image Degradation/Restoration Process. Noise Models. Restoration in the Presence of Noise Only-Spatial Filtering. Periodic Noise Reduction by Frequency Domain Filtering. Linear, Position-Invariant Degradations. Estimating the Degradation Function. Inverse Filtering. Minimum Mean Square Error (Wiener) Filtering. Constrained Least Squares Filtering. Geometric Mean Filter. Geometric Transformations; Color Image Processing - Color Fundamentals. Color Models. Pseudo color Image Processing. Basics of Full-Color Image Processing. Color Transformations. Smoothing and Sharpening. Color Segmentation. Noise in Color Images. Color Image Compression; Wavelets and Multiresolution Processing - Background. Multiresolution Expansions. Wavelet Transforms in One Dimension. The Fast Wavelet Transform. Wavelet Transforms in Two Dimensions. Wavelet Packets; Image Compression - Fundamentals. Image Compression Models. Elements of Information Theory. Error-Free Compression. Lossy Compression. Image Compression Standards; Morphological Image Processing - Preliminaries. Dilation and Erosion. Opening and Closing. The Hit-or-Miss Transformation. Some Basic Morphological Algorithms. Extensions to Gray-Scale Images; Image Segmentation - Detection of Discontinuities. Edge Linking and Boundary Detection. Thresholding. Region-Based Segmentation. Segmentation by Morphological Watersheds. The Use of Motion in Segmentation; Representation and Description - Representation. Boundary Descriptors. Regional Descriptors. Use of Principal Components for Description. Relational Descriptors; Object Recognition - Patterns and Pattern Classes. Recognition Based on Decision-Theoretic Methods. Structural Methods.
+
+**References:**
+1. Digital Image Processing - Rafael C Gonzalez and Richard E. Woods
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 831 | Computer Graphics and Multimedia | 3 | 2 | 1 |
+
+**Course Outline:** Introduction: History of computer graphics, graphics architectures and software, imaging: pinhole camera, human vision, synthetic camera, modeling vs. rendering OpenGL: architecture, displaying simple two-dimensional geometric objects, positioning systems, working in a windowed environment Color: Color perception, color models (RGB, CMY, and HLS), color transformations. Color in OpenGL. RGB and Indexed color. Input: working in a network environment, client-server computing; input measure, event, sample and request input, using callbacks, picking. Geometric transformations: affine transformations (translation, rotation, scaling, and shear), homogeneous coordinates, concatenation, current transformation and matrix stacks. Three dimensional graphics: classical three dimensional viewing, specifying views, affine transformation in3D, projective transformations. Ray Tracing. Shading: illumination and surface modeling, Phong shading model, polygon shading. Rasterization: line drawing via Bresenham's algorithm, clipping, polygonal fill, BitBlt. Introduction to hidden surface removal (z buffer). Discrete Techniques: buffers, bitblt, reading and writing bitmaps and pixel maps, texture mapping, compositing.
+
+**References:**
+1. Computer Graphics, Principle and Practices – James D. Foley, Andries van Dam, Steven K. Feiner and John F. Hughes.
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| BUS 842 | Strategic Management | 3 | 3 | 0 |
+
+**Course Outline: Strategic Management Concept:** Strategic Leadership, Competitive Advantage, Superior Performance, Performance in Nonprofit Enterprises, Strategic Manager, Strategy Making Process. **Industry analysis, External Environment and Internal Resources Analysis:** Industry and Sector, market segments, Porter's Five Forces Model, , Strategic Groups, Industry Life Cycle Analysis, Macroeconomic Forces, Competitive Advantage, Value Creation and Profitability, Avoiding Failures and Sustaining Competitive Advantage. **Functional and Business Level Strategy:** Achieving Superior Efficiency, Learning Effects, Materials Management, Strategy for Attaining superior Reliability, Responsiveness to Customers, Competitive Positioning and Business Level Strategy, Strategies in Fragmented Industries, Embryonic, Growth and Mature Industries. **Technological Support for Adopting Strategies and Global Strategy:** Format War, Strategies for wining in Format War, Information System Strategy, Managing Intellectual Property Rights, Capturing First-Mover Advantages, Technological Paradigm Shifts, Disruptive Technology, Profitability and Profit Growth through Global Expansion, Global Standardization Strategy. **Strategic Software Engineering:** Architecture-Centric Software Development Strategy, Software Product Lines, Software Effort and Cost Estimation Strategies, Openness of a Software, Software Supply Chain, Software Economics.
+
+**References:**
+1. Theory of Strategic Management (Eighth Edition) By: Hill/Jones
+2. Strategic Management (Concepts and Cases) Twelfth Edition By: Fred R. David
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| EEE 202 | Digital System Design | 3 | 2 | 1 |
+
+**Course Outline:**
+
+**Introduction:** Number System, Number Base Conversation, Complements, Signed Number. Arithmetic Operation- Binary, Octal, Hexadecimal Binary Codes e.g. BCD, ASCII, Grey etc.
+
+**Boolean Algebra:** Theorems & Properties of Boolean Algebra, Boolean Functions, Canonical and Standard Forms and Simplification.
+
+**Logic Gates:** Switching Circuits, Electronic Logic Gates, Gate Symbols, Design and operation of NOT, OR, AND, NOR, NAND, XOR, XNOR Gates. Analysis of Combinational Circuits-Algebraic Method, Truth Table Method.
+
+**Synthesis of Combinational Logic Circuits:** AND-OR NAND Networks, OR-AND and NOR Network, AND-OR-Invert Circuits.
+
+**Combinational Logic Design:** Circuits (gate level), Design Hierarchy and procedures. Two-level and multi-level implementations, Arithmetic operation using gates (add, subtract, multiply), Logic Minimization, K-Map, Unate Covering, Quine McCluskey Method, CAD tools for two level minimization, ESPRESSO Algorithm and other popular (multiplexers, encoders, decoders) modules design.
+
+**Programmable Logic Devices:** Technologies, Performance, Classical and Mid-Complexity Architectures (PLDs, CPLDs, FPGAs) and Modern Architectures (SoPC).
+
+**Sequential Logic Design:** Latches, Flip-Plops, State Machine Design & Minimization (Mealy and Moore models) and Design Problems.
+
+Sequential Circuits: Design of Synchronous Counters, Ripple counters, parallel Load counters, Introduction of Registers and shift Register:
+
+**Memory Design:** Random Access Memory (RAMS), Static RAMS, Dynamic RAMS, Memory organizations and Read only Memories (ROM)
+
+**References:**
+1. Digital Logic Circuit Analysis and Design by Vicor P. Nelson and H. Troy Nagle, Bill D. Carroll, J. David Irwin.
+2. Logic and Computer Design Fundamentals by M.M. Mano and C.R. Kime, Prentice-Hall, 4<sup>th</sup> Ed.
+3. Introduction to Digital Logic Design by J.P. Hayes, Addison-Wesley, 1993.
+4. Digital Systems: Principles and Applications, by Ronal J Tocci, Neal Widmer, Gregory L Moss, Prentice-Hall 1997.
+5. Fundamentals of Digital Logic with VHDL Design by S. Brown and Z Vranesic, McGraw-Hill, 2<sup>nd</sup> Ed.
+6. Analysis and Design of Digital Systems with VHDL by Allen Dewey, PWS Publication, 1<sup>st</sup> Ed.
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 303 | Data Communication and Networking | 3 | 2 | 1 |
+
+**Outline:** Introduction: Overview of Data communication, networking and network models; Physical Layer and Media: Data and Signal, Digital Transmission, Analog Transmission, Transmission Media Data Link Layer: Error detection and Correction, Flow and error control, Medium access control protocols (ALOHA, CSMA/CD, CSMA/CA), Channelization (FDMA, TDMA, CDMA) Ethernet, Wireless LANs; Network Layer: Logical Addressing.
+
+**References:**
+1. Data Communications and Networking, B. A. Forouzan, 5/e
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 501 | Parallel Computing | 3 | 2 | 1 |
+
+**Course Outline:** Introduction, Parallel Computer Model, the State of Computing, Flynn's Classification, Parallel/Vectors Computers, and Challenges for Parallel Computing, System Attributes to Performance, Clock Rate and CPI, Performance Factors, System Attributes, MIPS rates, Throughput rate, Implicit and Explicit Parallelism, Multiprocessors and Multicomputers, Shared Memory Multiprocessors, different types of model (UMA, NUMA, COMA), Distributed Memory Multicomputer, Multicomputer Generation, Multivector and SIMD Computers, Vector supercomputer, SIMD supercomputers, PRAM and VLSI Models, Parallel Random Access Machines, Time and Space Complexities, NP Completeness, PRAM models, VLSI complexity model and discussion about related papers, Introduction to Program and Network Properties, Condition of Parallelism, Data and Resource Dependencies, Control Dependence, Resource Dependence, Bernstein's Conditions, Hardware and Software Parallelism, The role of compiler, Program Partitioning and Scheduling, Grain Sizes and Latencies, Grain Packing and Scheduling, Static Multiprocessor Scheduling, Node duplication, Program Flow Mechanisms, Control Flow versus Data Flow, Demand Driven Mechanisms, System Interconnect Architectures, Network Properties and Routing, Node Degree and Network Diameter, Bisection Width, Data Routing Function (Permutations, Perfect Shuffle and Exchange, Hypercube Routing Functions, Broadcast and Multi cast), Network Performance, Related Paper Studies, Static connection Networks (Linear array, Ring and Chordal Ring, Barrel Shifter, Tree and Star, Mesh and Torus, Systolic Array, Hypercube, Cube Connected Cycles), Network Throughput, Dynamic Connection Networks, Principles of Scalable Performance, Performance Metrics and Measures, Parallelism Profile in Programs, Degree of Parallelism, Average Parallelism, Available Parallelism, Asymptotic Speedup, Harmonic Mean Performance, Arithmetic Mean Performance, Geometric mean Performance, harmonic Mean Performance, Harmonic Mean Speedup, Amdahl's Law, System Efficiency, Quality of Parallelism, Scalability of Parallel Algorithms, and Speedup Performance Laws, Processors and Memory Hierarchy: Advanced processor Technology, Design Space of Processors, Instruction Pipelines, Processors and Coprocessors, Superscalar and Vector Processors, Virtual Memory Technology, Pipelining and Superscalar Techniques: Linear Pipeline Processors, Asynchronous and Synchronous Models, Speedup Efficiency and Throughput, Nonlinear Pipeline Processors, Reservation and Latency Analysis, Collision Free Scheduling, state diagram, greedy cycles, Pipeline Schedule Optimization, Pipeline Throughput, and Instruction Pipeline Design, Branch Handling Techniques, Effects of Branch, Related Paper discussion, Multiprocessors and Multicomputer: Hierarchical Bus Systems, Crossbar Switch and Multi port Memory, Hot spot problem, Cache Coherence and Synchronization Mechanisms, cache coherence problem, process migration, snoopy bus protocols, Directory based protocols, Hardware Synchronizations Mechanisms, Software for Parallel Programming: Object Oriented Model, Functional and Logic Model, Parallel Language and Compilers.
+
+**References:**
+1. Kai Hwang, "Advanced Computer Architecture", McGraw-Hill.
+2. Principles of Parallel Programming, by Calvin Lin and Larry Snyder, Addison-Wesley, 2009.
+3. Patterns for Parallel Programming, by Mattson, Sanders, and Massingill, Addison-Wesley, 2005.
+4. The Art of Multiprocessor Programming, by Herlihy and Shavit, Morgan Kaufmann, 2008.
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| BUS 602 | Management Information Systems | 3 | 1 | 2 |
+
+**Course Outline:** Foundation Concepts a) Foundations of Information Systems in Business i. Foundation Concepts: Information Systems in Business ii. Foundation Concepts: The components of Information Systems b) Competing with Information Technology i. Fundamentals of Strategic Advantage ii. Using Information Technology for Strategic Advantage 2. Information Technologies a) Computer Hardware b) Computer Software c) Data Resource Management i. Technical Foundations of Database Management ii. Managing Data Resources d) Telecommunications and Networks i. The Networked Enterprise ii. Telecommunications Network Alternatives 3. Business Applications a) E-business Systems i. e-Business Systems ii. Functional Business Systems b) Enterprise Business Systems i. Management at Enterprise Level ii. Enterprise Resource Planning iii. Supply Chain Management c) E-commerce Systems i. e-Commerce Fundamentals ii. e-Commerce Applications and Issues d) Supporting Decision Making i. Decision Support in Business ii. Artificial Intelligence Technologies in Business 4. Development Process a) Developing Business / IT Strategies i. Planning Fundamentals ii. Implementation Challenges b) Developing Business / IT solutions i. Developing Business Systems ii. Implementing Business Systems 5. Management Challenges a) Security and Ethical Challenges i. Security, Ethical and Societal Challenges of IT ii. Security Management of Information Technology b) Enterprise and Global Management of Information Technology i. Managing Information Technology ii. Managing Global IT
+
+**Reference:**
+1. Management Information Systems, 10<sup>th</sup> edition, James O' Brien
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 802 | Computer, Data and Network Security | 3 | 1 | 2 |
+
+**Course Outline:** Overview: Network Security Concepts, Security Attacks, Services and Mechanisms; Classical Encryption techniques: Symmetric Cipher Model, Substitution and Permutation Ciphers, Steganography; Block Ciphers and Data Encryption Standard: Design principles and modes of operation; Public-key cryptography: Introduction to number theory, RSA and Diffie-Hellman; Message Digest: Requirements for cryptographic hash functions,MD5 ,SHA, Message authentication codes, digital signatures; Key Management and Distribution: Symmetric Key Distribution using Symmetric Encryption, Symmetric Key Distribution using asymmetric Encryption, public key distribution, public key certificates, x.509 certificates; Network and Internet Security: Transport Layer Security, Wireless LAN security, e-mail security.
+
+**References:**
+1. Data and Computer Communications By Stallings, 8th Edition, Pearson Education, 2007
+
+| Course Code | Course Title | Credit | Theory | Lab |
+|-------------|--------------|:------:|:------:|:---:|
+| CSE 844 | Applied Data Science | 3 | 2 | 1 |
+
+**Course Outline:**
+
+**Theory:** Introduction to applied data science, Data cleaning/Data Publishing, Data visualization techniques, Predictive analytics, Bayesian analytics, Building efficient models from complex data, Regularization, Opportunities involving applied data science. The course will cover techniques for collecting, storing, and analyzing data in varying formats. Scientific programming, supervised and unsupervised analytics and data visualization techniques will be covered. Topics will involve learning classifiers, Bayesian, maximum a posteriori, parameter estimation, decision trees, neural networks, support vector machines, bag of words classifiers, N-gram models, association rules, nearest neighbor classifiers, locally weighted regression, ensemble classifiers, Clustering, mixture models, k-means clustering, hierarchical clustering, distributional clustering, selected applications in data mining, automated knowledge acquisition, pattern recognition, program synthesis, text and language processing, internet-based information systems, etc.
+
+**Lab:** The course lab aims to provide an introduction to various topics such as Big Data, Pattern Discovery, Data Visualization, along with a toolkit to use with data i.e., Hadoop, TensorFlow, etc..
+
+**Text Book:**
+*Mount and Zumel (2014), Practical data science with R.*
+
+**References:**
+1. Cathy O'Neil and Rachel Schutt, *Doing Data Science*, O'Reilly, 2014
+2. Russell Jurney, *Agile Data Science*, O'Reilly, 2013.
+3. Edward Tufte, *The Visual Display of Quantitative Information*, Graphics Press, 2013 (2nd ed).
+4. Morgan Kaufmann, *Data Mining: Practical Machine Learning Tools and Techniques*. 3 edition, 2011
+5. Matthew Russell, *Mining the Social Web: Data Mining Facebook, Twitter, LinkedIn, Google+, GitHub, and More*. O'Reilly, 2013
 
 ---
 
