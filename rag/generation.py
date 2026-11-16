@@ -7,7 +7,7 @@ from vectors.faiss.store import FAISSVectorStore
 from vectors.chroma.store import ChromaVectorStore
 from common import Config, SentenceTransformerEmbeddings, LLM
 
-from tracing import (setup_tracing)
+from tracing import (setup_tracing, traceable, drop_self, docs_to_trace)
 
 setup_tracing()
 
@@ -16,6 +16,10 @@ class Retriever:
     def __init__(self, vectorstore):
         self.vectorstore = vectorstore
 
+    @traceable(
+        run_type="retriever", name="vector_search",
+        process_inputs=drop_self, process_outputs=docs_to_trace,
+    )
     def retrieve(
         self,
         query: str,
@@ -93,6 +97,10 @@ class GenerationPipeline:
 
         return "\n\n".join(context_parts)
 
+    @traceable(
+        run_type="chain", name="rag_query",
+        process_inputs=drop_self, tags=["rag"],
+    )
     def generate(
         self,
         query: str,

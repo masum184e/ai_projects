@@ -8,11 +8,18 @@ from langchain_core.embeddings import Embeddings
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
+from tracing import traceable, embed_inputs, embed_outputs
+
 class SentenceTransformerEmbeddings(Embeddings):
 
     def __init__(self, model_name: str = "all-MiniLM-L6-v2"):
         self.model = SentenceTransformer(model_name)
 
+    @traceable(
+        run_type="embedding", name="embed_documents",
+        process_inputs=embed_inputs, 
+        process_outputs=embed_outputs
+    )
     def embed_documents(self, texts: list[str]) -> list[list[float]]:
         vectors = self.model.encode(
             texts,
@@ -24,6 +31,11 @@ class SentenceTransformerEmbeddings(Embeddings):
 
         return np.array(vectors, dtype=np.float32)
 
+    @traceable(
+        run_type="embedding", name="embed_query",
+        process_inputs=embed_inputs, 
+        process_outputs=embed_outputs
+    )
     def embed_query(self, text: str) -> list[float]:
         vector = self.model.encode(
             text,
@@ -57,8 +69,10 @@ class LLM:
         max_tokens: int = 2048,
     ):
 
+        self.model_name = model_name
+        
         print(f"Using Groq model: {model_name}")
-
+        
         self.model = ChatGroq(
             model=model_name,
             api_key=config("GROQ_API_KEY"),
@@ -101,10 +115,14 @@ class LLM:
         context: str,
     ) -> str:
 
-        response = self.chain.invoke({
-            "question": question,
-            "context": context,
-        })
+        response = self.chain.invoke(
+            {"question": question, "context": context},
+            config={
+                "run_name": "groq_generate",
+                "tags": ["llm", "groq"],
+                "metadata": {"model": self.model_name, "temperature": self.model.temperature},
+            },
+        )
 
         return response
 
