@@ -5,8 +5,8 @@ from langchain_core.documents import Document
 
 from vectors.faiss.store import FAISSVectorStore
 from vectors.chroma.store import ChromaVectorStore
-from common import Config, SentenceTransformerEmbeddings, LLM
 
+from common import (Config, SentenceTransformerEmbeddings, LLM, Reranker)
 from tracing import (setup_tracing, traceable, drop_self, docs_to_trace)
 
 setup_tracing()
@@ -23,12 +23,12 @@ class Retriever:
     def retrieve(
         self,
         query: str,
-        k: int
+        retriever_k: int
     ) -> list[tuple[Document, float]]:
 
         return self.vectorstore.similarity_search_with_relevance_scores(
             query,
-            k=k
+            k=retriever_k,
         )
 
 
@@ -47,6 +47,8 @@ class GenerationPipeline:
             self.vector_store
         )
 
+        self.reranker = Reranker(self.cfg.reranker_model_name)
+        
         self.llm = LLM()
 
     def _initialize_vector_store(self):
@@ -74,6 +76,29 @@ class GenerationPipeline:
         raise ValueError(
             "store_type must be either 'chroma' or 'faiss'"
         )
+
+
+    def _retrieve(
+        self,
+        query: str,
+        top_k: int | None = None,
+    ) -> list[tuple[Document, float]]:
+
+        final_top_k = top_k if top_k is not None else self.cfg.top_k
+
+        retriever_k = max(self.cfg.retriever_k, final_top_k)
+
+        candidates = self.retriever.retrieve(
+            query=query,
+            retriever_k=retriever_k,
+        )
+
+        return self.reranker.rerank(
+            query=query,
+            documents=candidates,
+            top_k=final_top_k,
+        )
+
 
     def _build_context(
         self,
@@ -104,25 +129,17 @@ class GenerationPipeline:
     def generate(
         self,
         query: str,
-        k: int | None = None,
+        top_k: int | None = None,
     ) -> str:
 
         start = time.time()
 
-        # 1. Retrieve relevant documents
-        contexts = self.retriever.retrieve(
+        contexts = self._retrieve(
             query=query,
-            k=k or self.cfg.top_k
+            top_k=top_k,
         )
 
         retrieval_time = time.time() - start
-
-        if not contexts:
-            return "No relevant documents found."
-
-        # 2. Build context
-        context = self._build_context(contexts)
-
 
         print("\n" + "=" * 80)
         print("RETRIEVED CONTEXT DETAILS")
@@ -138,16 +155,17 @@ class GenerationPipeline:
             print(f"\nContext #{i}")
             print(f"ID: {doc.id or doc.metadata.get('id', 'N/A')}")
             print(f"Source: {doc.metadata.get('source', 'unknown')}")
-            print(f"Score: {score:.4f}")
+            print(f"Rerank score: {score:.4f}")
+            print(f"Vector score: {doc.metadata.get('retrieval_score', float('nan')):.4f}")
             print(f"Content length: {len(doc.page_content)}")
             print(f"Content: {doc.page_content}")
-        
+
         # 3. Generate answer
         generation_start = time.time()
 
         answer = self.llm.generate(
             question=query,
-            context=context
+            context=contexts
         )
 
         generation_time = time.time() - generation_start
@@ -188,15 +206,23 @@ def main() -> None:
         default=Config().top_k
     )
 
+    p.add_argument(
+        "--retriever-k",
+        type=int,
+        default=Config().retriever_k,
+        help="Candidates fetched from the vector store before reranking"
+    )
+
     args = p.parse_args()
 
     cfg = Config(
         index_dir=args.index_dir,
-        top_k=args.top_k
+        top_k=args.top_k,
+        retriever_k=args.retriever_k,
     )
 
     pipeline = GenerationPipeline(cfg)
-    # pipeline.generate("give me course list with course code and credit score of year 1 term 2")
+
     if args.query:
 
         pipeline.generate(args.query)

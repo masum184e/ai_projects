@@ -2,13 +2,16 @@ import numpy as np
 from decouple import config
 from langchain_groq import ChatGroq
 from dataclasses import dataclass, field
+
+from sentence_transformers import CrossEncoder
 from sentence_transformers import SentenceTransformer
 
+from langchain_core.documents import Document
 from langchain_core.embeddings import Embeddings
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
-from tracing import traceable, embed_inputs, embed_outputs
+from tracing import traceable, embed_inputs, embed_outputs, drop_self, docs_to_trace
 
 class SentenceTransformerEmbeddings(Embeddings):
 
@@ -29,7 +32,7 @@ class SentenceTransformerEmbeddings(Embeddings):
             normalize_embeddings=True,
         )
 
-        return np.array(vectors, dtype=np.float32)
+        return vectors.astype(np.float32).tolist()
 
     @traceable(
         run_type="embedding", name="embed_query",
@@ -43,8 +46,11 @@ class SentenceTransformerEmbeddings(Embeddings):
             normalize_embeddings=True,
         )
 
-        return np.array(vector, dtype=np.float32)
-        
+        return vector.astype(np.float32).tolist()
+
+    def get_model(self):
+        return self.model    
+
 @dataclass
 class Config:
     data_dir: str = "docs"
@@ -58,7 +64,9 @@ class Config:
     index_dir: str = "index"
     collection_name: str = "rag_documents"
 
-    top_k: int = 4
+    retriever_k: int = 5
+    top_k: int = 2
+    reranker_model_name: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 
 class LLM:
 
@@ -141,3 +149,65 @@ class LLM:
     def get_model(self):
         """Return the underlying LangChain chat model."""
         return self.model
+
+class Reranker:
+
+    def __init__(
+        self,
+        model_name: str = "cross-encoder/ms-marco-MiniLM-L-6-v2",
+        max_length: int = 512,
+        batch_size: int = 16,
+        device: str | None = None,
+    ):
+        print(f"Using reranker model: {model_name}")
+
+        self.model = CrossEncoder(
+            model_name,
+            max_length=max_length,
+            device=device,
+        )
+        self.batch_size = batch_size
+
+    @traceable(
+        run_type="retriever", name="rerank",
+        process_inputs=drop_self, process_outputs=docs_to_trace,
+    )
+    def rerank(
+        self,
+        query: str,
+        documents: list[tuple[Document, float]],
+        top_k: int,
+    ) -> list[tuple[Document, float]]:
+
+        if not documents:
+            return []
+
+        pairs = [(query, doc.page_content) for doc, _ in documents]
+
+        scores = self.model.predict(
+            pairs,
+            batch_size=self.batch_size,
+            show_progress_bar=False,
+        )
+
+        ranked = sorted(
+            zip(documents, scores),
+            key=lambda item: item[1],
+            reverse=True,
+        )[:top_k]
+
+        results = []
+
+        for (doc, retrieval_score), rerank_score in ranked:
+            reranked_doc = Document(
+                id=doc.id,
+                page_content=doc.page_content,
+                metadata={
+                    **doc.metadata,
+                    "retrieval_score": float(retrieval_score),
+                    "rerank_score": float(rerank_score),
+                },
+            )
+            results.append((reranked_doc, float(rerank_score)))
+
+        return results
