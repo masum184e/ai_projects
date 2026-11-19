@@ -49,8 +49,8 @@ class SentenceTransformerEmbeddings(Embeddings):
 class Config:
     data_dir: str = "docs"
 
-    chunk_size: int = 600
-    chunk_overlap: int = 100
+    chunk_size: int = 1200
+    chunk_overlap: int = 120
 
     embedding_model_name: str = "all-MiniLM-L6-v2"
 
