@@ -5,7 +5,7 @@ class LLM:
 
     def __init__(
         self,
-        model_name: str = "qwen/qwen3.5-27b",
+        model_name: str = "qwen/qwen3.8-27b",
         temperature: float = 0.0,
         max_tokens: int = 2048,
     ):
